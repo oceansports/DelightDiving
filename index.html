@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delight Diving | Scuba diving in Phu Quoc</title>
+<meta name="description" content="Delight Diving, SSI certified dive center in Phu Quoc. Try scuba, fun dives and SSI courses. Lặn bình khí tại Phú Quốc.">
+<meta property="og:title" content="Delight Diving | Phu Quoc">
+<meta property="og:description" content="Try scuba, fun dive, SSI courses. Book via phone, Zalo or WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --z1:#164AA0; --z2:#124193; --z3:#0F3A82; --z4:#0A2D6A; --z5:#07214F;
+  --orange:#FF9A2E; --navy:#07214F; --flag:#D62828; --zalo:#0068FF; --wa:#128C4A;
+  --body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --head:"Bricolage Grotesque","Be Vietnam Pro",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.65;color:#fff;background:var(--z5);padding-bottom:84px}
+h1,h2,h3{font-family:var(--head);line-height:1.12;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,6.5vw,4.6rem);font-weight:800}
+h2{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:800;color:var(--orange)}
+h3{font-size:1.5rem;font-weight:800;color:var(--orange)}
+p{margin:0 0 1em;max-width:62ch}
+a{color:inherit}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+svg.i{width:22px;height:22px;flex:none;fill:currentColor}
+
+/* Ngôn ngữ */
+.vi{display:none}
+html[data-lang="vi"] .en{display:none}
+html[data-lang="vi"] .vi{display:inline}
+
+/* Vùng độ sâu */
+.zone{padding:88px 24px}
+.zone > .in{max-width:1000px;margin:0 auto}
+.z1{background:var(--z1)} .z2{background:var(--z2)} .z3{background:var(--z3)} .z4{background:var(--z4)} .z5{background:var(--z5)}
+.mark-depth{font-family:var(--head);font-weight:600;font-size:.95rem;opacity:.8;margin:0 0 14px}
+
+/* Đồng hồ độ sâu */
+.depth{position:fixed;left:14px;top:12vh;height:76vh;width:48px;background:rgba(3,16,45,.92);border-radius:24px;z-index:20;font-family:var(--head)}
+.depth .num{position:absolute;top:10px;left:0;right:0;text-align:center;font-size:.8rem;font-weight:600}
+.depth .track{position:absolute;left:50%;top:44px;bottom:16px;width:2px;transform:translateX(-50%);background:rgba(255,255,255,.55)}
+.depth .track::before{content:"";position:absolute;left:-6px;right:-6px;top:0;bottom:0;background:repeating-linear-gradient(to bottom,rgba(255,255,255,.55) 0 1px,transparent 1px calc(100%/6))}
+.depth .diver{position:absolute;left:50%;top:0;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--orange);border:2px solid #fff;transition:top .12s linear}
+@media (min-width:900px){.zone{padding-left:96px}}
+@media (max-width:899px){
+  .depth{top:10px;left:10px;height:auto;width:auto;padding:6px 14px;border-radius:999px}
+  .depth .num{position:static;font-size:.9rem}
+  .depth .track{display:none}
+}
+
+/* Nút đổi ngôn ngữ */
+.lang{position:fixed;top:10px;right:12px;z-index:25;display:flex;background:rgba(3,16,45,.92);border-radius:999px;padding:3px}
+.lang button{font:600 .9rem var(--head);color:#fff;background:transparent;border:0;border-radius:999px;padding:6px 14px;cursor:pointer;min-width:48px}
+.lang button[aria-pressed="true"]{background:var(--orange);color:var(--navy)}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;
+  background:linear-gradient(rgba(7,33,79,.5),rgba(7,33,79,.93)),url(images/hero.jpg) center/cover var(--z1)}
+.hero .brand{font-weight:600;margin-bottom:26px}
+.hero h1{max-width:13ch;margin-bottom:.25em}
+.hero .with{font-family:var(--head);font-size:clamp(1.3rem,3vw,1.9rem);font-weight:600;margin-bottom:22px}
+.hero .lead{font-size:1.2rem;max-width:50ch}
+.scrollcue{margin-top:38px;font-weight:500;opacity:.85}
+
+/* Nút */
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:12px;font-weight:600;text-decoration:none;color:#fff;border:0;font-size:1rem;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-call{background:var(--orange);color:var(--navy)}
+.btn-zalo{background:var(--zalo)}
+.btn-wa{background:var(--wa)}
+.zalo-badge{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;background:#fff;color:var(--zalo);font:800 11px/1 var(--head)}
+
+/* Nút nổi */
+.dock{position:fixed;z-index:30;display:flex;gap:10px}
+.dock .btn{padding:12px 16px;box-shadow:0 6px 18px rgba(0,0,0,.4)}
+@media (min-width:700px){.dock{right:20px;bottom:20px;flex-direction:column}}
+@media (max-width:699px){
+  .dock{left:0;right:0;bottom:0;padding:10px;background:rgba(3,16,45,.97)}
+  .dock .btn{flex:1;justify-content:center;padding:12px 6px;font-size:.95rem;box-shadow:none}
+}
+
+/* Số liệu */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;margin:34px 0 44px}
+.stats div{border-top:3px solid var(--orange);padding-top:12px}
+.stats strong{display:block;font-family:var(--head);font-size:2.4rem;font-weight:800;line-height:1.1}
+.band{background:var(--orange);color:var(--navy);padding:20px 24px;border-radius:12px;font-weight:600;max-width:none}
+
+/* Tour */
+.schedule{display:inline-block;border:2px solid var(--orange);border-radius:12px;padding:16px 22px;margin:8px 0 40px}
+.schedule b{font-family:var(--head);font-size:1.1rem}
+.schedule p{margin:.3em 0 0}
+.pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;margin-bottom:44px}
+.pair .for{font-weight:600;margin:0 0 4px;opacity:.9}
+.pair ul{padding-left:1.2em;margin:0}
+.pair li{margin-bottom:4px}
+.fine{font-size:.92rem;opacity:.85;max-width:none}
+
+/* Bảng giá */
+.tbl{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:.98rem}
+.tbl th{background:var(--orange);color:var(--navy);text-align:left;padding:10px 12px;font-family:var(--head);font-weight:800}
+.tbl td{padding:12px;border-bottom:1px solid rgba(255,255,255,.3);vertical-align:top}
+.tbl td:last-child,.tbl th:last-child{text-align:right;white-space:nowrap}
+.tbl td:last-child{font-family:var(--head);font-weight:800;font-size:1.15rem}
+.tbl caption{text-align:left;font-family:var(--head);font-weight:800;font-size:1.3rem;padding-bottom:6px}
+.scroll-x{overflow-x:auto}
+
+/* Khóa học */
+.courses{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.courses ul{padding-left:1.2em;margin:0 0 1em}
+.photo{width:100%;border-radius:12px;display:block;object-fit:cover}
+@media (max-width:799px){.courses{grid-template-columns:1fr}.photo.tall{max-height:360px}}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:44px}
+.gallery img{width:100%;height:210px;object-fit:cover;border-radius:10px;display:block}
+
+/* Quảng cáo shop */
+.shop{display:grid;grid-template-columns:120px 1fr;max-width:620px;background:#fff;color:var(--navy);border-radius:14px;overflow:hidden;margin-top:24px}
+.flag{background:linear-gradient(to top right,transparent 44%,#fff 44%,#fff 56%,transparent 56%),var(--flag);min-height:150px;border-right:3px solid var(--navy)}
+.shop .body{padding:20px}
+.shop h3{color:var(--navy);margin-bottom:.3em}
+.shop p{margin:0 0 .6em;font-size:.97rem}
+.shop .tag{display:inline-block;background:var(--navy);color:#fff;padding:3px 10px;border-radius:6px;font-size:.85rem;font-weight:600;margin-bottom:.6em}
+.shop a.more{font-weight:600;color:var(--flag)}
+@media (max-width:520px){.shop{grid-template-columns:64px 1fr}}
+
+/* Liên hệ */
+.cta h2{font-size:clamp(2.4rem,6vw,4rem)}
+.card{border:2px solid var(--orange);border-radius:16px;padding:22px 26px;margin-top:30px;max-width:560px}
+.card p{margin:0 0 .4em}
+.card a{font-weight:600}
+.dive-in{font-family:var(--head);font-weight:800;color:var(--orange);font-size:1.4rem;margin-top:34px}
+footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-align:center}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3 .78.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.25-.12-1.45-.72-1.7-.8-.22-.08-.4-.12-.56.12-.17.25-.65.8-.8.96-.14.17-.3.18-.54.06a6.7 6.7 0 0 1-3.3-2.9c-.25-.43.25-.4.72-1.34.08-.17.04-.3-.02-.42-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.42h-.47a.9.9 0 0 0-.66.3c-.22.25-.86.84-.86 2.05s.88 2.37 1 2.54c.12.17 1.73 2.65 4.2 3.7 1.56.67 2.17.73 2.95.62.48-.07 1.45-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.17-.47-.3z"/></symbol>
+</svg>
+
+<!-- Đổi ngôn ngữ -->
+<div class="lang" role="group" aria-label="Language / Ngôn ngữ">
+  <button type="button" data-set="en" aria-pressed="true">EN</button>
+  <button type="button" data-set="vi" aria-pressed="false">VI</button>
+</div>
+
+<!-- Đồng hồ độ sâu -->
+<aside class="depth" aria-hidden="true">
+  <div class="num" id="depthNum">0 m</div>
+  <div class="track"><div class="diver" id="diver"></div></div>
+</aside>
+
+<!-- Nút liên hệ nổi -->
+<nav class="dock" aria-label="Quick contact">
+  <a class="btn btn-call" data-link="call" href="#contact"><svg class="i"><use href="#i-phone"/></svg><span class="en">Call</span><span class="vi">Gọi</span></a>
+  <a class="btn btn-zalo" data-link="zalo" href="#contact" target="_blank" rel="noopener"><span class="zalo-badge" aria-hidden="true">Zalo</span>Zalo</a>
+  <a class="btn btn-wa" data-link="wa" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>WhatsApp</a>
+</nav>
+
+<main>
+  <!-- Hero -->
+  <header class="zone hero">
+    <div class="in">
+      <p class="brand"><span class="en">Delight Diving | SSI Certified Dive Center | Phu Quoc</span><span class="vi">Delight Diving | Trung tâm lặn cấp chứng chỉ quốc tế SSI | Phú Quốc</span></p>
+      <h1><span class="en">Explore Phu Quoc underwater</span><span class="vi">Khám phá đại dương Phú Quốc</span></h1>
+      <p class="with"><span class="en">with Delight Diving</span><span class="vi">cùng Delight Diving</span></p>
+      <p class="lead"><span class="en">Discover your next adventure! Join us for an unforgettable scuba diving experience.</span><span class="vi">Tham gia trải nghiệm lặn bình khí đáng nhớ cùng cả gia đình trong kì nghỉ này.</span></p>
+      <div class="btns">
+        <a class="btn btn-call" data-link="call" href="#contact"><svg class="i"><use href="#i-phone"/></svg><span class="en">Call to book</span><span class="vi">Gọi đặt tour</span></a>
+        <a class="btn btn-zalo" data-link="zalo" href="#contact" target="_blank" rel="noopener"><span class="zalo-badge" aria-hidden="true">Zalo</span><span class="en">Chat on Zalo</span><span class="vi">Nhắn Zalo</span></a>
+        <a class="btn btn-wa" data-link="wa" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span class="en">Message on WhatsApp</span><span class="vi">Nhắn WhatsApp</span></a>
+      </div>
+      <p class="scrollcue"><span class="en">Scroll down to dive deeper. The gauge on the left shows your depth.</span><span class="vi">Cuộn xuống để lặn sâu hơn. Đồng hồ bên trái hiển thị độ sâu hiện tại.</span></p>
+    </div>
+  </header>
+
+  <!-- Giới thiệu -->
+  <section class="zone z1" id="about">
+    <div class="in">
+      <p class="mark-depth"><span class="en">Depth 5 m</span><span class="vi">Độ sâu 5 m</span></p>
+      <h2><span class="en">Why dive with Delight Diving</span><span class="vi">Vì sao chọn Delight Diving</span></h2>
+      <div class="stats">
+        <div><strong>SSI</strong><span class="en">Certified dive center</span><span class="vi">Trung tâm lặn được cấp chứng chỉ quốc tế</span></div>
+        <div><strong>10+</strong><span class="en">Years of experience as dive instructors</span><span class="vi">Năm kinh nghiệm từ huấn luyện viên lặn</span></div>
+        <div><strong>400+</strong><span class="en">Trips and courses provided</span><span class="vi">Tour và khóa học lặn bình khí được thực hiện</span></div>
+        <div><strong>95%</strong><span class="en">Customers satisfied with the service</span><span class="vi">Phản hồi tích cực từ khách hàng</span></div>
+      </div>
+      <p class="band"><span class="en">Whether you're a beginner or an experienced diver seeking new adventures, we have something for everyone.</span><span class="vi">Bất kể bạn là người mới tìm hiểu bộ môn lặn bình khí hoặc là người lặn chuyên nghiệp, Delight Diving sẽ mang đến một chuyến lặn biển tuyệt vời cho bạn!</span></p>
+    </div>
+  </section>
+
+  <!-- Tour -->
+  <section class="zone z2" id="tours">
+    <div class="in">
+      <p class="mark-depth"><span class="en">Depth 12 m</span><span class="vi">Độ sâu 12 m</span></p>
+      <h2><span class="en">Dive tours</span><span class="vi">Tour lặn biển</span></h2>
+
+      <div class="schedule">
+        <b><span class="en">Tour schedule</span><span class="vi">Lịch trình tour</span></b>
+        <p><span class="en">Departure 8:00 to 8:30 AM. Return around 3:00 PM. 1 day, 2 dives.</span><span class="vi">Khởi hành 8:00 đến 8:30 sáng. Kết thúc khoảng 3:00 chiều. 1 ngày, 2 lần lặn.</span></p>
+      </div>
+
+      <div class="pair">
+        <div>
+          <p class="for"><span class="en">For non-certified divers</span><span class="vi">Nếu bạn chưa có chứng chỉ lặn Open Water</span></p>
+          <h3><span class="en">Try Scuba</span><span class="vi">Lặn trải nghiệm</span></h3>
+          <p><span class="en">Perfect for first-time divers. Experience the excitement of breathing underwater with a personal instructor guiding you every step of the way.</span><span class="vi">Dành cho người mới bắt đầu. Trải nghiệm cảm giác thở dưới nước cùng huấn luyện viên hướng dẫn riêng xuyên suốt chuyến lặn.</span></p>
+          <ul>
+            <li><span class="en">Maximum depth: 10 meters</span><span class="vi">Độ sâu tối đa: 10 mét</span></li>
+            <li><span class="en">25 to 30 minutes per dive</span><span class="vi">25 đến 30 phút mỗi lần lặn</span></li>
+            <li><span class="en">1-on-1 with instructor</span><span class="vi">1 kèm 1 với huấn luyện viên</span></li>
+            <li><span class="en">Learn basic scuba skills</span><span class="vi">Học kỹ năng lặn cơ bản</span></li>
+            <li><span class="en">Safe and beginner friendly</span><span class="vi">An toàn và phù hợp cho người mới</span></li>
+          </ul>
+        </div>
+        <div>
+          <p class="for"><span class="en">For certified divers</span><span class="vi">Bạn đã sở hữu chứng chỉ lặn Open Water</span></p>
+          <h3><span class="en">Fun Dive</span><span class="vi">Lặn giải trí</span></h3>
+          <p><span class="en">Enjoy relaxing dives through vibrant coral reefs and diverse marine life with experienced dive guides.</span><span class="vi">Khám phá rạn san hô đầy màu sắc và hệ sinh vật biển phong phú cùng đội ngũ dive guide giàu kinh nghiệm.</span></p>
+          <ul>
+            <li><span class="en">45 to 50 minutes per dive</span><span class="vi">45 đến 50 phút mỗi lần lặn</span></li>
+            <li><span class="en">Small dive groups</span><span class="vi">Nhóm lặn nhỏ</span></li>
+            <li><span class="en">Professional dive guide</span><span class="vi">Dive guide chuyên nghiệp</span></li>
+            <li><span class="en">Rich marine biodiversity</span><span class="vi">Hệ sinh thái biển đa dạng</span></li>
+            <li><span class="en">Macro marine life and underwater swim-throughs</span><span class="vi">Sinh vật macro và hang dưới nước</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scroll-x">
+        <table class="tbl">
+          <caption><span class="en">Tour price list</span><span class="vi">Biểu phí tour</span></caption>
+          <thead><tr>
+            <th scope="col">Tour</th>
+            <th scope="col"><span class="en">Dives per day</span><span class="vi">Ca lặn</span></th>
+            <th scope="col"><span class="en">Dive duration</span><span class="vi">Thời lượng</span></th>
+            <th scope="col"><span class="en">Fee (USD)</span><span class="vi">Giá (USD)</span></th>
+          </tr></thead>
+          <tbody>
+            <tr><td><span class="en">Try scuba</span><span class="vi">Lặn trải nghiệm</span></td><td>2</td><td><span class="en">20 to 30 mins/site</span><span class="vi">20 đến 30 phút/ca</span></td><td>110</td></tr>
+            <tr><td><span class="en">Fun dive</span><span class="vi">Lặn giải trí</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span></td><td>100</td></tr>
+            <tr><td><span class="en">Snorkeling</span><span class="vi">Bơi snorkeling</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span></td><td>50</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine"><span class="en">We also run private diving tours for a limited number of people (1 to 4 guests). Contact us for more information.</span><span class="vi">Để đặt tour riêng với số lượng khách từ 1 đến 4 người, vui lòng liên hệ trực tiếp để biết thêm thông tin.</span></p>
+      <p class="fine"><span class="en">Fee included: hotel transfer (within city center), high-quality gear, boat fee, refreshments on boat (tea, coffee, fruits) and lunch.</span><span class="vi">Giá tour đã bao gồm: xe đưa đón từ trung tâm thành phố, trang thiết bị lặn chất lượng cao, tàu di chuyển (trà, cà phê, trái cây) và bữa trưa.</span></p>
+      <p class="fine"><span class="en">Dive sites depend on weather conditions and underwater visibility.</span><span class="vi">Các điểm lặn trong ngày phụ thuộc vào thời tiết và tầm nhìn dưới nước.</span></p>
+    </div>
+  </section>
+
+  <!-- Khóa học -->
+  <section class="zone z3" id="courses">
+    <div class="in">
+      <p class="mark-depth"><span class="en">Depth 18 m</span><span class="vi">Độ sâu 18 m</span></p>
+      <h2><span class="en">Scuba diving courses</span><span class="vi">Khóa học lặn bình khí</span></h2>
+      <div class="courses">
+        <div>
+          <p><span class="en">Take 3 days to become an SSI-certified diver and explore the underwater world anywhere. We offer courses for every level, from basic to advanced:</span><span class="vi">Chỉ 3 ngày để sở hữu chứng chỉ lặn quốc tế SSI, mở ra cơ hội khám phá đại dương trên khắp thế giới. Delight Diving cung cấp các khóa học lặn cho mọi cấp độ:</span></p>
+          <ul>
+            <li><span class="en">Open Water Diver</span><span class="vi">Khóa Open Water Diver</span></li>
+            <li><span class="en">Advanced Adventurer</span><span class="vi">Khóa lặn bình khí nâng cao</span></li>
+            <li><span class="en">Diver Stress and Rescue</span><span class="vi">Khóa lặn cứu hộ</span></li>
+            <li><span class="en">Specialities</span><span class="vi">Khóa học kỹ năng chuyên môn</span></li>
+            <li><span class="en">Refresher course</span><span class="vi">Khóa lặn ôn tập</span></li>
+          </ul>
+        </div>
+        <img class="photo tall" src="images/pool.jpg" alt="Diver kneeling in a pool during a course" loading="lazy">
+      </div>
+
+      <div class="scroll-x" style="margin-top:36px">
+        <table class="tbl">
+          <caption><span class="en">Course price list</span><span class="vi">Biểu phí khóa học</span></caption>
+          <thead><tr>
+            <th scope="col"><span class="en">Course</span><span class="vi">Khóa học</span></th>
+            <th scope="col"><span class="en">Dives</span><span class="vi">Ca lặn</span></th>
+            <th scope="col"><span class="en">Duration</span><span class="vi">Thời lượng</span></th>
+            <th scope="col"><span class="en">Fee (USD)</span><span class="vi">Giá (USD)</span></th>
+          </tr></thead>
+          <tbody>
+            <tr><td><span class="en">Open Water Diver</span><span class="vi">Lặn bình khí cơ bản</span></td><td>4</td><td><span class="en">1-day pool session, 2-day open water</span><span class="vi">1 ngày tại hồ bơi, 2 ngày tại biển</span></td><td>390</td></tr>
+            <tr><td><span class="en">Advanced Adventurer</span><span class="vi">Lặn bình khí nâng cao</span></td><td>5</td><td><span class="en">2-day open water</span><span class="vi">2 ngày tại biển</span></td><td>370</td></tr>
+            <tr><td><span class="en">Diver Stress and Rescue</span><span class="vi">Lặn cứu hộ</span></td><td>6</td><td><span class="en">3-day open water</span><span class="vi">3 ngày tại biển</span></td><td>520</td></tr>
+            <tr><td><span class="en">Specialities</span><span class="vi">Kỹ năng chuyên môn</span></td><td>-</td><td><span class="en">Depends on the selected program</span><span class="vi">Phụ thuộc vào chương trình học, vui lòng liên hệ để được tư vấn</span></td><td>-</td></tr>
+            <tr><td><span class="en">Refresher course</span><span class="vi">Ôn tập</span></td><td>2</td><td><span class="en">1-day open water</span><span class="vi">1 ngày tại biển</span></td><td>110</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine"><span class="en">Fee included: online textbooks, SSI international dive certificate fee, diving insurance from DiveAssure, hotel transfer (within city center), high-quality gear, boat fee, refreshments on boat (tea, coffee, fruits) and lunch.</span><span class="vi">Giá đã bao gồm: giáo trình lý thuyết, phí cấp chứng chỉ lặn quốc tế SSI, bảo hiểm lặn từ DiveAssure, xe đưa đón từ trung tâm thành phố, trang thiết bị lặn chất lượng cao, tàu di chuyển (trà, cà phê, trái cây) và bữa trưa.</span></p>
+
+      <div class="gallery">
+        <img src="images/reefdiver.jpg" alt="Diver above a coral reef" loading="lazy">
+        <img src="images/group.jpg" alt="Three divers swimming together" loading="lazy">
+        <img src="images/friends.jpg" alt="Group of divers smiling underwater" loading="lazy">
+        <img src="images/pair.jpg" alt="Two divers on a reef dive" loading="lazy">
+        <img src="images/reef2.jpg" alt="Diver exploring a reef" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Góc quảng cáo shop -->
+  <section class="zone z4" id="shop">
+    <div class="in">
+      <p class="mark-depth"><span class="en">Depth 24 m. A corner for dive lovers</span><span class="vi">Độ sâu 24 m. Góc nhỏ dành cho người mê lặn</span></p>
+      <div class="shop">
+        <div class="flag" aria-hidden="true"></div>
+        <div class="body">
+          <span class="tag"><span class="en">10% off for guests of this page</span><span class="vi">Giảm 10% cho khách của trang này</span></span>
+          <h3>[Shop name]</h3>
+          <p><span class="en">Masks, fins, wetsuits and dive computers for sale or rent. Regulator servicing available.</span><span class="vi">Bán và cho thuê mặt nạ, chân vịt, đồ lặn, máy tính lặn. Nhận bảo dưỡng bộ điều áp.</span></p>
+          <p>[Address / Địa chỉ] | [Opening hours / Giờ mở cửa]</p>
+          <a class="more" data-link="shop" href="#contact" target="_blank" rel="noopener"><span class="en">Visit the shop</span><span class="vi">Xem cửa hàng</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Liên hệ -->
+  <section class="zone z5 cta" id="contact">
+    <div class="in">
+      <p class="mark-depth"><span class="en">Depth 30 m</span><span class="vi">Độ sâu 30 m</span></p>
+      <h2><span class="en">Book your dive trip today</span><span class="vi">Đặt tour ngay hôm nay</span></h2>
+      <p><span class="en">Tell us the number of guests, your preferred date and your diving level. We will reply with a quote and the plan for the day.</span><span class="vi">Cho chúng tôi biết số khách, ngày dự kiến và trình độ lặn. Chúng tôi sẽ gửi báo giá và lịch trình trong ngày.</span></p>
+      <div class="btns">
+        <a class="btn btn-call" data-link="call" href="#contact"><svg class="i"><use href="#i-phone"/></svg><span class="en">Call now</span><span class="vi">Gọi ngay</span></a>
+        <a class="btn btn-zalo" data-link="zalo" href="#contact" target="_blank" rel="noopener"><span class="zalo-badge" aria-hidden="true">Zalo</span><span class="en">Connect on Zalo</span><span class="vi">Kết nối Zalo</span></a>
+        <a class="btn btn-wa" data-link="wa" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span class="en">Chat on WhatsApp</span><span class="vi">Nhắn WhatsApp</span></a>
+      </div>
+      <div class="card">
+        <p><b><span class="en">Phone, Zalo, WhatsApp</span><span class="vi">Điện thoại, Zalo, WhatsApp</span></b></p>
+        <p><a id="tel1" href="#contact"></a></p>
+        <p><a id="tel2" href="#contact"></a></p>
+        <p>Email: <a id="mail" href="#contact"></a></p>
+        <p>Website: <a id="web" href="#contact" target="_blank" rel="noopener"></a></p>
+        <p><a data-link="fb" href="#contact" target="_blank" rel="noopener">Facebook: Delight Diving</a> | <a data-link="ig" href="#contact" target="_blank" rel="noopener">Instagram: delight_diving</a></p>
+      </div>
+      <p class="dive-in">Dive Into Delight</p>
+    </div>
+  </section>
+</main>
+
+<footer><span class="en">© Delight Diving. Prices and details may change.</span><span class="vi">© Delight Diving. Giá và nội dung có thể thay đổi.</span></footer>
+
+<script>
+/* ====== CHỈNH THÔNG TIN Ở ĐÂY ====== */
+const CONFIG = {
+  phone: "+84783395163",        // số dùng cho nút Gọi, Zalo, WhatsApp (có +84, không khoảng trắng)
+  phoneShow: "+84 783 395 163",
+  phone2: "+84777777074",       // số thứ hai, chỉ hiển thị ở phần liên hệ
+  phone2Show: "+84 77 7777 074",
+  email: "dediving@gmail.com",
+  website: "http://www.delightdiving.com",
+  facebook: "https://www.facebook.com/",              // dán link Facebook thật của Delight Diving
+  instagram: "https://www.instagram.com/delight_diving/",
+  shopUrl: "https://example.github.io/",              // link website / fanpage / Google Maps của shop lặn
+  whatsappMessage: "Hello, I would like to book a dive trip. / Xin chào, tôi muốn đặt tour lặn biển."
+};
+/* ==================================== */
+
+const digits = CONFIG.phone.replace(/\D/g, "");
+const links = {
+  call: "tel:" + CONFIG.phone,
+  zalo: "https://zalo.me/" + digits,
+  wa: "https://wa.me/" + digits + "?text=" + encodeURIComponent(CONFIG.whatsappMessage),
+  fb: CONFIG.facebook,
+  ig: CONFIG.instagram,
+  shop: CONFIG.shopUrl
+};
+document.querySelectorAll("[data-link]").forEach(function (a) { a.href = links[a.dataset.link]; });
+function setLink(id, href, text) { var a = document.getElementById(id); a.href = href; a.textContent = text; }
+setLink("tel1", "tel:" + CONFIG.phone, CONFIG.phoneShow);
+setLink("tel2", "tel:" + CONFIG.phone2, CONFIG.phone2Show);
+setLink("mail", "mailto:" + CONFIG.email, CONFIG.email);
+setLink("web", CONFIG.website, CONFIG.website.replace(/^https?:\/\//, ""));
+
+/* Ngôn ngữ: tự chọn theo trình duyệt, nhớ lựa chọn */
+const TITLES = {
+  en: "Delight Diving | Scuba diving in Phu Quoc",
+  vi: "Delight Diving | Lặn bình khí tại Phú Quốc"
+};
+function setLang(lang) {
+  document.documentElement.dataset.lang = lang;
+  document.documentElement.lang = lang;
+  document.title = TITLES[lang];
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.setAttribute("aria-pressed", String(b.dataset.set === lang));
+  });
+  try { localStorage.setItem("lang", lang); } catch (e) {}
+}
+document.querySelectorAll(".lang button").forEach(function (b) {
+  b.addEventListener("click", function () { setLang(b.dataset.set); });
+});
+var saved = null;
+try { saved = localStorage.getItem("lang"); } catch (e) {}
+setLang(saved || ((navigator.language || "").toLowerCase().indexOf("vi") === 0 ? "vi" : "en"));
+
+/* Đồng hồ độ sâu theo vị trí cuộn */
+const MAX_DEPTH = 30;
+const num = document.getElementById("depthNum");
+const diver = document.getElementById("diver");
+function updateDepth() {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const p = max > 0 ? Math.min(Math.max(window.scrollY / max, 0), 1) : 0;
+  num.textContent = Math.round(p * MAX_DEPTH) + " m";
+  diver.style.top = (p * 100) + "%";
+}
+window.addEventListener("scroll", updateDepth, { passive: true });
+window.addEventListener("resize", updateDepth);
+updateDepth();
+</script>
+</body>
+</html>
