@@ -33,9 +33,10 @@ a{color:inherit}
 svg.i{width:22px;height:22px;flex:none;fill:currentColor}
 
 /* Ngôn ngữ */
-.vi{display:none}
-html[data-lang="vi"] .en{display:none}
+.vi,.ru{display:none}
+html[data-lang="vi"] .en,html[data-lang="ru"] .en{display:none}
 html[data-lang="vi"] .vi{display:inline}
+html[data-lang="ru"] .ru{display:inline}
 
 /* Vùng độ sâu */
 .zone{padding:88px 24px}
@@ -148,9 +149,10 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
 </svg>
 
 <!-- Đổi ngôn ngữ -->
-<div class="lang" role="group" aria-label="Language / Ngôn ngữ">
+<div class="lang" role="group" aria-label="Language / Ngôn ngữ / Язык">
   <button type="button" data-set="en" aria-pressed="true">EN</button>
   <button type="button" data-set="vi" aria-pressed="false">VI</button>
+  <button type="button" data-set="ru" aria-pressed="false">RU</button>
 </div>
 
 <!-- Đồng hồ độ sâu -->
@@ -161,117 +163,117 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
 
 <!-- Nút liên hệ nổi -->
 <nav class="dock" aria-label="Quick contact">
-  <a class="btn btn-call" data-link="call" href="#contact"><svg class="i"><use href="#i-phone"/></svg><span class="en">Call</span><span class="vi">Gọi</span></a>
+  <a class="btn btn-call" data-link="call" href="#contact"><svg class="i"><use href="#i-phone"/></svg><span class="en">Call</span><span class="vi">Gọi</span><span class="ru">Звонок</span></a>
   <a class="btn btn-zalo" data-link="zalo" href="#contact" target="_blank" rel="noopener"><span class="zalo-badge" aria-hidden="true">Zalo</span>Zalo</a>
   <a class="btn btn-wa" data-link="wa" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>WhatsApp</a>
 </nav>
 
 <main>
   <!-- Hero -->
-  <header class="zone hero">
+  <header class="zone hero" id="top">
     <div class="in">
-      <p class="brand"><span class="en">Delight Diving | SSI Certified Dive Center | Phu Quoc</span><span class="vi">Delight Diving | Trung tâm lặn cấp chứng chỉ quốc tế SSI | Phú Quốc</span></p>
-      <h1><span class="en">Explore Phu Quoc underwater</span><span class="vi">Khám phá đại dương Phú Quốc</span></h1>
-      <p class="with"><span class="en">with Delight Diving</span><span class="vi">cùng Delight Diving</span></p>
-      <p class="lead"><span class="en">Discover your next adventure! Join us for an unforgettable scuba diving experience.</span><span class="vi">Tham gia trải nghiệm lặn bình khí đáng nhớ cùng cả gia đình trong kì nghỉ này.</span></p>
+      <p class="brand"><span class="en">Delight Diving | SSI Certified Dive Center | Phu Quoc</span><span class="vi">Delight Diving | Trung tâm lặn cấp chứng chỉ quốc tế SSI | Phú Quốc</span><span class="ru">Delight Diving | Сертифицированный дайв-центр SSI | Фукуок</span></p>
+      <h1><span class="en">Explore Phu Quoc underwater</span><span class="vi">Khám phá đại dương Phú Quốc</span><span class="ru">Исследуйте подводный мир Фукуока</span></h1>
+      <p class="with"><span class="en">with Delight Diving</span><span class="vi">cùng Delight Diving</span><span class="ru">вместе с Delight Diving</span></p>
+      <p class="lead"><span class="en">Discover your next adventure! Join us for an unforgettable scuba diving experience.</span><span class="vi">Tham gia trải nghiệm lặn bình khí đáng nhớ cùng cả gia đình trong kì nghỉ này.</span><span class="ru">Откройте для себя новое приключение! Присоединяйтесь к нам для незабываемого дайвинга.</span></p>
       <div class="btns">
-        <a class="btn btn-call" data-link="call" href="#contact"><svg class="i"><use href="#i-phone"/></svg><span class="en">Call to book</span><span class="vi">Gọi đặt tour</span></a>
-        <a class="btn btn-zalo" data-link="zalo" href="#contact" target="_blank" rel="noopener"><span class="zalo-badge" aria-hidden="true">Zalo</span><span class="en">Chat on Zalo</span><span class="vi">Nhắn Zalo</span></a>
-        <a class="btn btn-wa" data-link="wa" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span class="en">Message on WhatsApp</span><span class="vi">Nhắn WhatsApp</span></a>
+        <a class="btn btn-call" data-link="call" href="#contact"><svg class="i"><use href="#i-phone"/></svg><span class="en">Call to book</span><span class="vi">Gọi đặt tour</span><span class="ru">Позвонить для заказа</span></a>
+        <a class="btn btn-zalo" data-link="zalo" href="#contact" target="_blank" rel="noopener"><span class="zalo-badge" aria-hidden="true">Zalo</span><span class="en">Chat on Zalo</span><span class="vi">Nhắn Zalo</span><span class="ru">Написать в Zalo</span></a>
+        <a class="btn btn-wa" data-link="wa" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span class="en">Message on WhatsApp</span><span class="vi">Nhắn WhatsApp</span><span class="ru">Написать в WhatsApp</span></a>
       </div>
-      <p class="scrollcue"><span class="en">Scroll down to dive deeper. The gauge on the left shows your depth.</span><span class="vi">Cuộn xuống để lặn sâu hơn. Đồng hồ bên trái hiển thị độ sâu hiện tại.</span></p>
+      <p class="scrollcue"><span class="en">Scroll down to dive deeper. The gauge on the left shows your depth.</span><span class="vi">Cuộn xuống để lặn sâu hơn. Đồng hồ bên trái hiển thị độ sâu hiện tại.</span><span class="ru">Прокручивайте вниз, чтобы погрузиться глубже. Шкала слева показывает текущую глубину.</span></p>
     </div>
   </header>
 
   <!-- Giới thiệu -->
   <section class="zone z1" id="about">
     <div class="in">
-      <p class="mark-depth"><span class="en">Depth 5 m</span><span class="vi">Độ sâu 5 m</span></p>
-      <h2><span class="en">Why dive with Delight Diving</span><span class="vi">Vì sao chọn Delight Diving</span></h2>
+      <p class="mark-depth"><span class="en">Depth 5 m</span><span class="vi">Độ sâu 5 m</span><span class="ru">Глубина 5 м</span></p>
+      <h2><span class="en">Why dive with Delight Diving</span><span class="vi">Vì sao chọn Delight Diving</span><span class="ru">Почему стоит нырять с Delight Diving</span></h2>
       <div class="stats">
-        <div><strong>SSI</strong><span class="en">Certified dive center</span><span class="vi">Trung tâm lặn được cấp chứng chỉ quốc tế</span></div>
-        <div><strong>10+</strong><span class="en">Years of experience as dive instructors</span><span class="vi">Năm kinh nghiệm từ huấn luyện viên lặn</span></div>
-        <div><strong>400+</strong><span class="en">Trips and courses provided</span><span class="vi">Tour và khóa học lặn bình khí được thực hiện</span></div>
-        <div><strong>95%</strong><span class="en">Customers satisfied with the service</span><span class="vi">Phản hồi tích cực từ khách hàng</span></div>
+        <div><strong>SSI</strong><span class="en">Certified dive center</span><span class="vi">Trung tâm lặn được cấp chứng chỉ quốc tế</span><span class="ru">Сертифицированный дайв-центр</span></div>
+        <div><strong>10+</strong><span class="en">Years of experience as dive instructors</span><span class="vi">Năm kinh nghiệm từ huấn luyện viên lặn</span><span class="ru">Лет опыта работы инструкторами по дайвингу</span></div>
+        <div><strong>400+</strong><span class="en">Trips and courses provided</span><span class="vi">Tour và khóa học lặn bình khí được thực hiện</span><span class="ru">Проведено туров и курсов</span></div>
+        <div><strong>95%</strong><span class="en">Customers satisfied with the service</span><span class="vi">Phản hồi tích cực từ khách hàng</span><span class="ru">Клиентов довольны сервисом</span></div>
       </div>
-      <p class="band"><span class="en">Whether you're a beginner or an experienced diver seeking new adventures, we have something for everyone.</span><span class="vi">Bất kể bạn là người mới tìm hiểu bộ môn lặn bình khí hoặc là người lặn chuyên nghiệp, Delight Diving sẽ mang đến một chuyến lặn biển tuyệt vời cho bạn!</span></p>
+      <p class="band"><span class="en">Whether you're a beginner or an experienced diver seeking new adventures, we have something for everyone.</span><span class="vi">Bất kể bạn là người mới tìm hiểu bộ môn lặn bình khí hoặc là người lặn chuyên nghiệp, Delight Diving sẽ mang đến một chuyến lặn biển tuyệt vời cho bạn!</span><span class="ru">Новичок вы или опытный дайвер в поисках новых приключений, у нас найдётся что-то для каждого.</span></p>
     </div>
   </section>
 
   <!-- Tour -->
   <section class="zone z2" id="tours">
     <div class="in">
-      <p class="mark-depth"><span class="en">Depth 12 m</span><span class="vi">Độ sâu 12 m</span></p>
-      <h2><span class="en">Dive tours</span><span class="vi">Tour lặn biển</span></h2>
+      <p class="mark-depth"><span class="en">Depth 12 m</span><span class="vi">Độ sâu 12 m</span><span class="ru">Глубина 12 м</span></p>
+      <h2><span class="en">Dive tours</span><span class="vi">Tour lặn biển</span><span class="ru">Дайв-туры</span></h2>
 
       <div class="schedule">
-        <b><span class="en">Tour schedule</span><span class="vi">Lịch trình tour</span></b>
-        <p><span class="en">Departure 8:00 to 8:30 AM. Return around 3:00 PM. 1 day, 2 dives.</span><span class="vi">Khởi hành 8:00 đến 8:30 sáng. Kết thúc khoảng 3:00 chiều. 1 ngày, 2 lần lặn.</span></p>
+        <b><span class="en">Tour schedule</span><span class="vi">Lịch trình tour</span><span class="ru">Расписание тура</span></b>
+        <p><span class="en">Departure 8:00 to 8:30 AM. Return around 3:00 PM. 1 day, 2 dives.</span><span class="vi">Khởi hành 8:00 đến 8:30 sáng. Kết thúc khoảng 3:00 chiều. 1 ngày, 2 lần lặn.</span><span class="ru">Отправление с 8:00 до 8:30. Возвращение около 15:00. 1 день, 2 погружения.</span></p>
       </div>
 
       <div class="pair">
         <div>
-          <p class="for"><span class="en">For non-certified divers</span><span class="vi">Nếu bạn chưa có chứng chỉ lặn Open Water</span></p>
-          <h3><span class="en">Try Scuba</span><span class="vi">Lặn trải nghiệm</span></h3>
-          <p><span class="en">Perfect for first-time divers. Experience the excitement of breathing underwater with a personal instructor guiding you every step of the way.</span><span class="vi">Dành cho người mới bắt đầu. Trải nghiệm cảm giác thở dưới nước cùng huấn luyện viên hướng dẫn riêng xuyên suốt chuyến lặn.</span></p>
+          <p class="for"><span class="en">For non-certified divers</span><span class="vi">Nếu bạn chưa có chứng chỉ lặn Open Water</span><span class="ru">Для тех, у кого нет сертификата</span></p>
+          <h3><span class="en">Try Scuba</span><span class="vi">Lặn trải nghiệm</span><span class="ru">Пробное погружение</span></h3>
+          <p><span class="en">Perfect for first-time divers. Experience the excitement of breathing underwater with a personal instructor guiding you every step of the way.</span><span class="vi">Dành cho người mới bắt đầu. Trải nghiệm cảm giác thở dưới nước cùng huấn luyện viên hướng dẫn riêng xuyên suốt chuyến lặn.</span><span class="ru">Отлично подходит для новичков. Почувствуйте, каково это — дышать под водой, пока личный инструктор сопровождает вас на каждом шаге.</span></p>
           <ul>
-            <li><span class="en">Maximum depth: 10 meters</span><span class="vi">Độ sâu tối đa: 10 mét</span></li>
-            <li><span class="en">25 to 30 minutes per dive</span><span class="vi">25 đến 30 phút mỗi lần lặn</span></li>
-            <li><span class="en">1-on-1 with instructor</span><span class="vi">1 kèm 1 với huấn luyện viên</span></li>
-            <li><span class="en">Learn basic scuba skills</span><span class="vi">Học kỹ năng lặn cơ bản</span></li>
-            <li><span class="en">Safe and beginner friendly</span><span class="vi">An toàn và phù hợp cho người mới</span></li>
+            <li><span class="en">Maximum depth: 10 meters</span><span class="vi">Độ sâu tối đa: 10 mét</span><span class="ru">Максимальная глубина: 10 метров</span></li>
+            <li><span class="en">25 to 30 minutes per dive</span><span class="vi">25 đến 30 phút mỗi lần lặn</span><span class="ru">От 25 до 30 минут на погружение</span></li>
+            <li><span class="en">1-on-1 with instructor</span><span class="vi">1 kèm 1 với huấn luyện viên</span><span class="ru">Один на один с инструктором</span></li>
+            <li><span class="en">Learn basic scuba skills</span><span class="vi">Học kỹ năng lặn cơ bản</span><span class="ru">Освойте базовые навыки дайвинга</span></li>
+            <li><span class="en">Safe and beginner friendly</span><span class="vi">An toàn và phù hợp cho người mới</span><span class="ru">Безопасно и подходит новичкам</span></li>
           </ul>
         </div>
         <div>
-          <p class="for"><span class="en">For certified divers</span><span class="vi">Bạn đã sở hữu chứng chỉ lặn Open Water</span></p>
-          <h3><span class="en">Fun Dive</span><span class="vi">Lặn giải trí</span></h3>
-          <p><span class="en">Enjoy relaxing dives through vibrant coral reefs and diverse marine life with experienced dive guides.</span><span class="vi">Khám phá rạn san hô đầy màu sắc và hệ sinh vật biển phong phú cùng đội ngũ dive guide giàu kinh nghiệm.</span></p>
+          <p class="for"><span class="en">For certified divers</span><span class="vi">Bạn đã sở hữu chứng chỉ lặn Open Water</span><span class="ru">Для дайверов с сертификатом</span></p>
+          <h3><span class="en">Fun Dive</span><span class="vi">Lặn giải trí</span><span class="ru">Фан-дайвинг</span></h3>
+          <p><span class="en">Enjoy relaxing dives through vibrant coral reefs and diverse marine life with experienced dive guides.</span><span class="vi">Khám phá rạn san hô đầy màu sắc và hệ sinh vật biển phong phú cùng đội ngũ dive guide giàu kinh nghiệm.</span><span class="ru">Наслаждайтесь неспешными погружениями среди ярких коралловых рифов и разнообразной морской жизни с опытными дайв-гидами.</span></p>
           <ul>
-            <li><span class="en">45 to 50 minutes per dive</span><span class="vi">45 đến 50 phút mỗi lần lặn</span></li>
-            <li><span class="en">Small dive groups</span><span class="vi">Nhóm lặn nhỏ</span></li>
-            <li><span class="en">Professional dive guide</span><span class="vi">Dive guide chuyên nghiệp</span></li>
-            <li><span class="en">Rich marine biodiversity</span><span class="vi">Hệ sinh thái biển đa dạng</span></li>
-            <li><span class="en">Macro marine life and underwater swim-throughs</span><span class="vi">Sinh vật macro và hang dưới nước</span></li>
+            <li><span class="en">45 to 50 minutes per dive</span><span class="vi">45 đến 50 phút mỗi lần lặn</span><span class="ru">От 45 до 50 минут на погружение</span></li>
+            <li><span class="en">Small dive groups</span><span class="vi">Nhóm lặn nhỏ</span><span class="ru">Небольшие группы</span></li>
+            <li><span class="en">Professional dive guide</span><span class="vi">Dive guide chuyên nghiệp</span><span class="ru">Профессиональный дайв-гид</span></li>
+            <li><span class="en">Rich marine biodiversity</span><span class="vi">Hệ sinh thái biển đa dạng</span><span class="ru">Богатое морское биоразнообразие</span></li>
+            <li><span class="en">Macro marine life and underwater swim-throughs</span><span class="vi">Sinh vật macro và hang dưới nước</span><span class="ru">Макро-обитатели моря и подводные проходы</span></li>
           </ul>
         </div>
       </div>
 
       <div class="scroll-x">
         <table class="tbl">
-          <caption><span class="en">Tour price list</span><span class="vi">Biểu phí tour</span></caption>
+          <caption><span class="en">Tour price list</span><span class="vi">Biểu phí tour</span><span class="ru">Стоимость туров</span></caption>
           <thead><tr>
             <th scope="col">Tour</th>
-            <th scope="col"><span class="en">Dives per day</span><span class="vi">Ca lặn</span></th>
-            <th scope="col"><span class="en">Dive duration</span><span class="vi">Thời lượng</span></th>
-            <th scope="col"><span class="en">Fee (USD)</span><span class="vi">Giá (USD)</span></th>
+            <th scope="col"><span class="en">Dives per day</span><span class="vi">Ca lặn</span><span class="ru">Погружений в день</span></th>
+            <th scope="col"><span class="en">Dive duration</span><span class="vi">Thời lượng</span><span class="ru">Длительность</span></th>
+            <th scope="col"><span class="en">Fee (USD)</span><span class="vi">Giá (USD)</span><span class="ru">Цена (USD)</span></th>
           </tr></thead>
           <tbody>
-            <tr><td><span class="en">Try scuba</span><span class="vi">Lặn trải nghiệm</span></td><td>2</td><td><span class="en">20 to 30 mins/site</span><span class="vi">20 đến 30 phút/ca</span></td><td>110</td></tr>
-            <tr><td><span class="en">Fun dive</span><span class="vi">Lặn giải trí</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span></td><td>100</td></tr>
-            <tr><td><span class="en">Snorkeling</span><span class="vi">Bơi snorkeling</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span></td><td>50</td></tr>
+            <tr><td><span class="en">Try scuba</span><span class="vi">Lặn trải nghiệm</span><span class="ru">Пробное погружение</span></td><td>2</td><td><span class="en">20 to 30 mins/site</span><span class="vi">20 đến 30 phút/ca</span><span class="ru">От 20 до 30 мин на точку</span></td><td>110</td></tr>
+            <tr><td><span class="en">Fun dive</span><span class="vi">Lặn giải trí</span><span class="ru">Фан-дайвинг</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span><span class="ru">От 40 до 50 мин на точку</span></td><td>100</td></tr>
+            <tr><td><span class="en">Snorkeling</span><span class="vi">Bơi snorkeling</span><span class="ru">Снорклинг</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span><span class="ru">От 40 до 50 мин на точку</span></td><td>50</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="fine"><span class="en">We also run private diving tours for a limited number of people (1 to 4 guests). Contact us for more information.</span><span class="vi">Để đặt tour riêng với số lượng khách từ 1 đến 4 người, vui lòng liên hệ trực tiếp để biết thêm thông tin.</span></p>
-      <p class="fine"><span class="en">Fee included: hotel transfer (within city center), high-quality gear, boat fee, refreshments on boat (tea, coffee, fruits) and lunch.</span><span class="vi">Giá tour đã bao gồm: xe đưa đón từ trung tâm thành phố, trang thiết bị lặn chất lượng cao, tàu di chuyển (trà, cà phê, trái cây) và bữa trưa.</span></p>
-      <p class="fine"><span class="en">Dive sites depend on weather conditions and underwater visibility.</span><span class="vi">Các điểm lặn trong ngày phụ thuộc vào thời tiết và tầm nhìn dưới nước.</span></p>
+      <p class="fine"><span class="en">We also run private diving tours for a limited number of people (1 to 4 guests). Contact us for more information.</span><span class="vi">Để đặt tour riêng với số lượng khách từ 1 đến 4 người, vui lòng liên hệ trực tiếp để biết thêm thông tin.</span><span class="ru">Мы также проводим частные дайв-туры для небольшой группы (от 1 до 4 гостей). Свяжитесь с нами, чтобы узнать подробности.</span></p>
+      <p class="fine"><span class="en">Fee included: hotel transfer (within city center), high-quality gear, boat fee, refreshments on boat (tea, coffee, fruits) and lunch.</span><span class="vi">Giá tour đã bao gồm: xe đưa đón từ trung tâm thành phố, trang thiết bị lặn chất lượng cao, tàu di chuyển (trà, cà phê, trái cây) và bữa trưa.</span><span class="ru">В стоимость входит: трансфер от отеля (в пределах центра города), качественное снаряжение, аренда лодки, чай, кофе, фрукты на борту и обед.</span></p>
+      <p class="fine"><span class="en">Dive sites depend on weather conditions and underwater visibility.</span><span class="vi">Các điểm lặn trong ngày phụ thuộc vào thời tiết và tầm nhìn dưới nước.</span><span class="ru">Места погружений зависят от погодных условий и подводной видимости.</span></p>
     </div>
   </section>
 
   <!-- Khóa học -->
   <section class="zone z3" id="courses">
     <div class="in">
-      <p class="mark-depth"><span class="en">Depth 18 m</span><span class="vi">Độ sâu 18 m</span></p>
-      <h2><span class="en">Scuba diving courses</span><span class="vi">Khóa học lặn bình khí</span></h2>
+      <p class="mark-depth"><span class="en">Depth 18 m</span><span class="vi">Độ sâu 18 m</span><span class="ru">Глубина 18 м</span></p>
+      <h2><span class="en">Scuba diving courses</span><span class="vi">Khóa học lặn bình khí</span><span class="ru">Курсы дайвинга</span></h2>
       <div class="courses">
         <div>
-          <p><span class="en">Take 3 days to become an SSI-certified diver and explore the underwater world anywhere. We offer courses for every level, from basic to advanced:</span><span class="vi">Chỉ 3 ngày để sở hữu chứng chỉ lặn quốc tế SSI, mở ra cơ hội khám phá đại dương trên khắp thế giới. Delight Diving cung cấp các khóa học lặn cho mọi cấp độ:</span></p>
+          <p><span class="en">Take 3 days to become an SSI-certified diver and explore the underwater world anywhere. We offer courses for every level, from basic to advanced:</span><span class="vi">Chỉ 3 ngày để sở hữu chứng chỉ lặn quốc tế SSI, mở ra cơ hội khám phá đại dương trên khắp thế giới. Delight Diving cung cấp các khóa học lặn cho mọi cấp độ:</span><span class="ru">Всего за 3 дня вы можете стать дайвером с международным сертификатом SSI и исследовать подводный мир в любой точке планеты. Мы предлагаем курсы для любого уровня, от базового до продвинутого:</span></p>
           <ul>
-            <li><span class="en">Open Water Diver</span><span class="vi">Khóa Open Water Diver</span></li>
-            <li><span class="en">Advanced Adventurer</span><span class="vi">Khóa lặn bình khí nâng cao</span></li>
-            <li><span class="en">Diver Stress and Rescue</span><span class="vi">Khóa lặn cứu hộ</span></li>
-            <li><span class="en">Specialities</span><span class="vi">Khóa học kỹ năng chuyên môn</span></li>
-            <li><span class="en">Refresher course</span><span class="vi">Khóa lặn ôn tập</span></li>
+            <li><span class="en">Open Water Diver</span><span class="vi">Khóa Open Water Diver</span><span class="ru">Open Water Diver</span></li>
+            <li><span class="en">Advanced Adventurer</span><span class="vi">Khóa lặn bình khí nâng cao</span><span class="ru">Advanced Adventurer</span></li>
+            <li><span class="en">Diver Stress and Rescue</span><span class="vi">Khóa lặn cứu hộ</span><span class="ru">Diver Stress and Rescue (спасательный курс)</span></li>
+            <li><span class="en">Specialities</span><span class="vi">Khóa học kỹ năng chuyên môn</span><span class="ru">Специализации</span></li>
+            <li><span class="en">Refresher course</span><span class="vi">Khóa lặn ôn tập</span><span class="ru">Курс повторения (Refresher)</span></li>
           </ul>
         </div>
         <img class="photo tall" src="images/pool.jpg" alt="Diver kneeling in a pool during a course" loading="lazy">
@@ -279,23 +281,23 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
 
       <div class="scroll-x" style="margin-top:36px">
         <table class="tbl">
-          <caption><span class="en">Course price list</span><span class="vi">Biểu phí khóa học</span></caption>
+          <caption><span class="en">Course price list</span><span class="vi">Biểu phí khóa học</span><span class="ru">Стоимость курсов</span></caption>
           <thead><tr>
-            <th scope="col"><span class="en">Course</span><span class="vi">Khóa học</span></th>
-            <th scope="col"><span class="en">Dives</span><span class="vi">Ca lặn</span></th>
-            <th scope="col"><span class="en">Duration</span><span class="vi">Thời lượng</span></th>
-            <th scope="col"><span class="en">Fee (USD)</span><span class="vi">Giá (USD)</span></th>
+            <th scope="col"><span class="en">Course</span><span class="vi">Khóa học</span><span class="ru">Курс</span></th>
+            <th scope="col"><span class="en">Dives</span><span class="vi">Ca lặn</span><span class="ru">Погружений</span></th>
+            <th scope="col"><span class="en">Duration</span><span class="vi">Thời lượng</span><span class="ru">Длительность</span></th>
+            <th scope="col"><span class="en">Fee (USD)</span><span class="vi">Giá (USD)</span><span class="ru">Цена (USD)</span></th>
           </tr></thead>
           <tbody>
-            <tr><td><span class="en">Open Water Diver</span><span class="vi">Lặn bình khí cơ bản</span></td><td>4</td><td><span class="en">1-day pool session, 2-day open water</span><span class="vi">1 ngày tại hồ bơi, 2 ngày tại biển</span></td><td>390</td></tr>
-            <tr><td><span class="en">Advanced Adventurer</span><span class="vi">Lặn bình khí nâng cao</span></td><td>5</td><td><span class="en">2-day open water</span><span class="vi">2 ngày tại biển</span></td><td>370</td></tr>
-            <tr><td><span class="en">Diver Stress and Rescue</span><span class="vi">Lặn cứu hộ</span></td><td>6</td><td><span class="en">3-day open water</span><span class="vi">3 ngày tại biển</span></td><td>520</td></tr>
-            <tr><td><span class="en">Specialities</span><span class="vi">Kỹ năng chuyên môn</span></td><td>-</td><td><span class="en">Depends on the selected program</span><span class="vi">Phụ thuộc vào chương trình học, vui lòng liên hệ để được tư vấn</span></td><td>-</td></tr>
-            <tr><td><span class="en">Refresher course</span><span class="vi">Ôn tập</span></td><td>2</td><td><span class="en">1-day open water</span><span class="vi">1 ngày tại biển</span></td><td>110</td></tr>
+            <tr><td><span class="en">Open Water Diver</span><span class="vi">Lặn bình khí cơ bản</span><span class="ru">Open Water Diver</span></td><td>4</td><td><span class="en">1-day pool session, 2-day open water</span><span class="vi">1 ngày tại hồ bơi, 2 ngày tại biển</span><span class="ru">1 день в бассейне, 2 дня в открытой воде</span></td><td>390</td></tr>
+            <tr><td><span class="en">Advanced Adventurer</span><span class="vi">Lặn bình khí nâng cao</span><span class="ru">Advanced Adventurer</span></td><td>5</td><td><span class="en">2-day open water</span><span class="vi">2 ngày tại biển</span><span class="ru">2 дня в открытой воде</span></td><td>370</td></tr>
+            <tr><td><span class="en">Diver Stress and Rescue</span><span class="vi">Lặn cứu hộ</span><span class="ru">Diver Stress and Rescue (спасательный курс)</span></td><td>6</td><td><span class="en">3-day open water</span><span class="vi">3 ngày tại biển</span><span class="ru">3 дня в открытой воде</span></td><td>520</td></tr>
+            <tr><td><span class="en">Specialities</span><span class="vi">Kỹ năng chuyên môn</span><span class="ru">Специализации</span></td><td>-</td><td><span class="en">Depends on the selected program</span><span class="vi">Phụ thuộc vào chương trình học, vui lòng liên hệ để được tư vấn</span><span class="ru">Зависит от выбранной программы</span></td><td>-</td></tr>
+            <tr><td><span class="en">Refresher course</span><span class="vi">Ôn tập</span><span class="ru">Курс повторения (Refresher)</span></td><td>2</td><td><span class="en">1-day open water</span><span class="vi">1 ngày tại biển</span><span class="ru">1 день в открытой воде</span></td><td>110</td></tr>
           </tbody>
         </table>
       </div>
-      <p class="fine"><span class="en">Fee included: online textbooks, SSI international dive certificate fee, diving insurance from DiveAssure, hotel transfer (within city center), high-quality gear, boat fee, refreshments on boat (tea, coffee, fruits) and lunch.</span><span class="vi">Giá đã bao gồm: giáo trình lý thuyết, phí cấp chứng chỉ lặn quốc tế SSI, bảo hiểm lặn từ DiveAssure, xe đưa đón từ trung tâm thành phố, trang thiết bị lặn chất lượng cao, tàu di chuyển (trà, cà phê, trái cây) và bữa trưa.</span></p>
+      <p class="fine"><span class="en">Fee included: online textbooks, SSI international dive certificate fee, diving insurance from DiveAssure, hotel transfer (within city center), high-quality gear, boat fee, refreshments on boat (tea, coffee, fruits) and lunch.</span><span class="vi">Giá đã bao gồm: giáo trình lý thuyết, phí cấp chứng chỉ lặn quốc tế SSI, bảo hiểm lặn từ DiveAssure, xe đưa đón từ trung tâm thành phố, trang thiết bị lặn chất lượng cao, tàu di chuyển (trà, cà phê, trái cây) và bữa trưa.</span><span class="ru">В стоимость входит: онлайн-учебники, оформление международного сертификата SSI, страховка DiveAssure, трансфер от отеля (в пределах центра города), качественное снаряжение, аренда лодки, чай, кофе, фрукты на борту и обед.</span></p>
 
       <div class="gallery">
         <img src="images/reefdiver.jpg" alt="Diver above a coral reef" loading="lazy">
@@ -310,15 +312,15 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
   <!-- Góc quảng cáo shop -->
   <section class="zone z4" id="shop">
     <div class="in">
-      <p class="mark-depth"><span class="en">Depth 24 m. A corner for dive lovers</span><span class="vi">Độ sâu 24 m. Góc nhỏ dành cho người mê lặn</span></p>
+      <p class="mark-depth"><span class="en">Depth 24 m. A corner for dive lovers</span><span class="vi">Độ sâu 24 m. Góc nhỏ dành cho người mê lặn</span><span class="ru">Глубина 24 м. Уголок для любителей дайвинга</span></p>
       <div class="shop">
         <div class="flag" aria-hidden="true"></div>
         <div class="body">
-          <span class="tag"><span class="en">10% off for guests of this page</span><span class="vi">Giảm 10% cho khách của trang này</span></span>
+          <span class="tag"><span class="en">10% off for guests of this page</span><span class="vi">Giảm 10% cho khách của trang này</span><span class="ru">Скидка 10% для гостей этой страницы</span></span>
           <h3>[Shop name]</h3>
-          <p><span class="en">Masks, fins, wetsuits and dive computers for sale or rent. Regulator servicing available.</span><span class="vi">Bán và cho thuê mặt nạ, chân vịt, đồ lặn, máy tính lặn. Nhận bảo dưỡng bộ điều áp.</span></p>
+          <p><span class="en">Masks, fins, wetsuits and dive computers for sale or rent. Regulator servicing available.</span><span class="vi">Bán và cho thuê mặt nạ, chân vịt, đồ lặn, máy tính lặn. Nhận bảo dưỡng bộ điều áp.</span><span class="ru">Маски, ласты, гидрокостюмы и дайв-компьютеры в продаже и в аренду. Обслуживание регуляторов.</span></p>
           <p>[Address / Địa chỉ] | [Opening hours / Giờ mở cửa]</p>
-          <a class="more" data-link="shop" href="#contact" target="_blank" rel="noopener"><span class="en">Visit the shop</span><span class="vi">Xem cửa hàng</span></a>
+          <a class="more" data-link="shop" href="#contact" target="_blank" rel="noopener"><span class="en">Visit the shop</span><span class="vi">Xem cửa hàng</span><span class="ru">Перейти в магазин</span></a>
         </div>
       </div>
     </div>
@@ -327,16 +329,16 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
   <!-- Liên hệ -->
   <section class="zone z5 cta" id="contact">
     <div class="in">
-      <p class="mark-depth"><span class="en">Depth 30 m</span><span class="vi">Độ sâu 30 m</span></p>
-      <h2><span class="en">Book your dive trip today</span><span class="vi">Đặt tour ngay hôm nay</span></h2>
-      <p><span class="en">Tell us the number of guests, your preferred date and your diving level. We will reply with a quote and the plan for the day.</span><span class="vi">Cho chúng tôi biết số khách, ngày dự kiến và trình độ lặn. Chúng tôi sẽ gửi báo giá và lịch trình trong ngày.</span></p>
+      <p class="mark-depth"><span class="en">Depth 30 m</span><span class="vi">Độ sâu 30 m</span><span class="ru">Глубина 30 м</span></p>
+      <h2><span class="en">Book your dive trip today</span><span class="vi">Đặt tour ngay hôm nay</span><span class="ru">Забронируйте дайв-тур сегодня</span></h2>
+      <p><span class="en">Tell us the number of guests, your preferred date and your diving level. We will reply with a quote and the plan for the day.</span><span class="vi">Cho chúng tôi biết số khách, ngày dự kiến và trình độ lặn. Chúng tôi sẽ gửi báo giá và lịch trình trong ngày.</span><span class="ru">Сообщите количество гостей, желаемую дату и уровень подготовки. Мы пришлём расчёт стоимости и план на день.</span></p>
       <div class="btns">
-        <a class="btn btn-call" data-link="call" href="#contact"><svg class="i"><use href="#i-phone"/></svg><span class="en">Call now</span><span class="vi">Gọi ngay</span></a>
-        <a class="btn btn-zalo" data-link="zalo" href="#contact" target="_blank" rel="noopener"><span class="zalo-badge" aria-hidden="true">Zalo</span><span class="en">Connect on Zalo</span><span class="vi">Kết nối Zalo</span></a>
-        <a class="btn btn-wa" data-link="wa" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span class="en">Chat on WhatsApp</span><span class="vi">Nhắn WhatsApp</span></a>
+        <a class="btn btn-call" data-link="call" href="#contact"><svg class="i"><use href="#i-phone"/></svg><span class="en">Call now</span><span class="vi">Gọi ngay</span><span class="ru">Позвонить</span></a>
+        <a class="btn btn-zalo" data-link="zalo" href="#contact" target="_blank" rel="noopener"><span class="zalo-badge" aria-hidden="true">Zalo</span><span class="en">Connect on Zalo</span><span class="vi">Kết nối Zalo</span><span class="ru">Связаться в Zalo</span></a>
+        <a class="btn btn-wa" data-link="wa" href="#contact" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span class="en">Chat on WhatsApp</span><span class="vi">Nhắn WhatsApp</span><span class="ru">Написать в WhatsApp</span></a>
       </div>
       <div class="card">
-        <p><b><span class="en">Phone, Zalo, WhatsApp</span><span class="vi">Điện thoại, Zalo, WhatsApp</span></b></p>
+        <p><b><span class="en">Phone, Zalo, WhatsApp</span><span class="vi">Điện thoại, Zalo, WhatsApp</span><span class="ru">Телефон, Zalo, WhatsApp</span></b></p>
         <p><a id="tel1" href="#contact"></a></p>
         <p><a id="tel2" href="#contact"></a></p>
         <p>Email: <a id="mail" href="#contact"></a></p>
@@ -348,7 +350,7 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
   </section>
 </main>
 
-<footer><span class="en">© Delight Diving. Prices and details may change.</span><span class="vi">© Delight Diving. Giá và nội dung có thể thay đổi.</span></footer>
+<footer><span class="en">© Delight Diving. Prices and details may change. Clicks on the contact buttons are counted anonymously.</span><span class="vi">© Delight Diving. Giá và nội dung có thể thay đổi. Lượt bấm các nút liên hệ được đếm ẩn danh.</span><span class="ru">© Delight Diving. Цены и условия могут меняться. Нажатия на кнопки связи учитываются анонимно.</span></footer>
 
 <script>
 /* ====== CHỈNH THÔNG TIN Ở ĐÂY ====== */
@@ -362,7 +364,8 @@ const CONFIG = {
   facebook: "https://www.facebook.com/",              // dán link Facebook thật của Delight Diving
   instagram: "https://www.instagram.com/delight_diving/",
   shopUrl: "https://example.github.io/",              // link website / fanpage / Google Maps của shop lặn
-  whatsappMessage: "Hello, I would like to book a dive trip. / Xin chào, tôi muốn đặt tour lặn biển."
+  whatsappMessage: "Hello, I would like to book a dive trip. / Xin chào, tôi muốn đặt tour lặn biển. / Здравствуйте, хочу забронировать дайв-тур.",
+  trackUrl: ""   // dán URL Web App của Google Apps Script để đếm lượt bấm và gửi email (xem file google-apps-script.gs)
 };
 /* ==================================== */
 
@@ -382,10 +385,25 @@ setLink("tel2", "tel:" + CONFIG.phone2, CONFIG.phone2Show);
 setLink("mail", "mailto:" + CONFIG.email, CONFIG.email);
 setLink("web", CONFIG.website, CONFIG.website.replace(/^https?:\/\//, ""));
 
+/* Đồng hồ độ sâu theo vị trí cuộn */
+const MAX_DEPTH = 30;
+const UNIT = { en: "m", vi: "m", ru: "м" };
+const num = document.getElementById("depthNum");
+const diver = document.getElementById("diver");
+function updateDepth() {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const p = max > 0 ? Math.min(Math.max(window.scrollY / max, 0), 1) : 0;
+  num.textContent = Math.round(p * MAX_DEPTH) + " " + UNIT[document.documentElement.dataset.lang];
+  diver.style.top = (p * 100) + "%";
+}
+window.addEventListener("scroll", updateDepth, { passive: true });
+window.addEventListener("resize", updateDepth);
+
 /* Ngôn ngữ: tự chọn theo trình duyệt, nhớ lựa chọn */
 const TITLES = {
   en: "Delight Diving | Scuba diving in Phu Quoc",
-  vi: "Delight Diving | Lặn bình khí tại Phú Quốc"
+  vi: "Delight Diving | Lặn bình khí tại Phú Quốc",
+  ru: "Delight Diving | Дайвинг на Фукуоке"
 };
 function setLang(lang) {
   document.documentElement.dataset.lang = lang;
@@ -395,27 +413,46 @@ function setLang(lang) {
     b.setAttribute("aria-pressed", String(b.dataset.set === lang));
   });
   try { localStorage.setItem("lang", lang); } catch (e) {}
+  updateDepth();
 }
 document.querySelectorAll(".lang button").forEach(function (b) {
   b.addEventListener("click", function () { setLang(b.dataset.set); });
 });
 var saved = null;
 try { saved = localStorage.getItem("lang"); } catch (e) {}
-setLang(saved || ((navigator.language || "").toLowerCase().indexOf("vi") === 0 ? "vi" : "en"));
+var nav = (navigator.language || "").toLowerCase();
+setLang(saved && TITLES[saved] ? saved : (nav.indexOf("vi") === 0 ? "vi" : nav.indexOf("ru") === 0 ? "ru" : "en"));
 
-/* Đồng hồ độ sâu theo vị trí cuộn */
-const MAX_DEPTH = 30;
-const num = document.getElementById("depthNum");
-const diver = document.getElementById("diver");
-function updateDepth() {
-  const max = document.documentElement.scrollHeight - window.innerHeight;
-  const p = max > 0 ? Math.min(Math.max(window.scrollY / max, 0), 1) : 0;
-  num.textContent = Math.round(p * MAX_DEPTH) + " m";
-  diver.style.top = (p * 100) + "%";
-}
-window.addEventListener("scroll", updateDepth, { passive: true });
-window.addEventListener("resize", updateDepth);
-updateDepth();
+/* Đếm lượt bấm nút Gọi / Zalo / WhatsApp */
+const TRACKED = { call: 1, zalo: 1, wa: 1 };
+try {
+  if (/[?&]notrack=1/.test(location.search)) localStorage.setItem("notrack", "1");   // thêm ?notrack=1 vào link để máy của bạn không bị đếm
+  if (/[?&]notrack=0/.test(location.search)) localStorage.removeItem("notrack");
+} catch (e) {}
+function trackingOff() { try { return localStorage.getItem("notrack") === "1"; } catch (e) { return false; } }
+const lastSent = {};
+document.addEventListener("click", function (ev) {
+  const a = ev.target.closest && ev.target.closest("a[data-link]");
+  if (!a) return;
+  const ch = a.dataset.link;
+  if (!TRACKED[ch] || !CONFIG.trackUrl || trackingOff()) return;
+  const now = Date.now();
+  if (lastSent[ch] && now - lastSent[ch] < 5000) return;   // bấm đúp trong 5 giây chỉ tính 1 lần
+  lastSent[ch] = now;
+  const box = a.closest(".dock") ? "dock" : (a.closest("[id]") ? a.closest("[id]").id : "page");
+  const body = JSON.stringify({
+    channel: ch,
+    where: box,
+    lang: document.documentElement.dataset.lang,
+    page: location.origin + location.pathname,
+    ref: document.referrer || ""
+  });
+  try {
+    fetch(CONFIG.trackUrl, { method: "POST", mode: "no-cors", keepalive: true, body: body });
+  } catch (e) {
+    try { navigator.sendBeacon(CONFIG.trackUrl, body); } catch (e2) {}
+  }
+});
 </script>
 </body>
 </html>
