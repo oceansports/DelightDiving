@@ -122,15 +122,26 @@ html[data-lang="ru"] .ru{display:inline}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-top:44px}
 .gallery img{width:100%;height:210px;object-fit:cover;border-radius:10px;display:block}
 
-/* Quảng cáo shop */
-.shop{display:grid;grid-template-columns:120px 1fr;max-width:620px;background:#fff;color:var(--navy);border-radius:14px;overflow:hidden;margin-top:24px}
-.flag{background:linear-gradient(to top right,transparent 44%,#fff 44%,#fff 56%,transparent 56%),var(--flag);min-height:150px;border-right:3px solid var(--navy)}
-.shop .body{padding:20px}
-.shop h3{color:var(--navy);margin-bottom:.3em}
-.shop p{margin:0 0 .6em;font-size:.97rem}
-.shop .tag{display:inline-block;background:var(--navy);color:#fff;padding:3px 10px;border-radius:6px;font-size:.85rem;font-weight:600;margin-bottom:.6em}
-.shop a.more{font-weight:600;color:var(--flag)}
-@media (max-width:520px){.shop{grid-template-columns:64px 1fr}}
+/* Quảng cáo Ocean Sports VN */
+.ad{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;background:#101A2B;border:3px solid #F9B34A;border-radius:28px;padding:44px;color:#E8EEF9;margin-top:20px}
+.ad p{max-width:none}
+.ad-badge{display:inline-block;border:2px solid #F9B34A;color:#F9B34A;border-radius:10px;padding:5px 14px;font-weight:600;font-size:.95rem;margin-bottom:18px}
+.ad-title{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:800;color:#EAF0FB;margin-bottom:.5em}
+.ad-title em{font-style:normal;color:#F9B34A}
+.ad-sub{color:#9FB0CC;margin:0}
+.ad-list{list-style:none;padding:0;margin:22px 0 0}
+.ad-list li{position:relative;padding-left:30px;margin-bottom:14px}
+.ad-list li::before{content:"";position:absolute;left:0;top:.55em;width:12px;height:12px;border-radius:50%;background:#F9B34A}
+.coupon{border:2px dashed #F9B34A;border-radius:16px;padding:18px 24px;background:#17233D}
+.coupon p{margin:0 0 4px;color:#C5D0E6;font-size:.95rem}
+.coupon strong{font-family:var(--head);font-size:2rem;font-weight:800;color:#F9B34A}
+.stores{margin:22px 0}
+.stores dt{font-weight:700;color:#EAF0FB;font-size:.95rem}
+.stores dd{margin:0 0 8px;color:#9FB0CC;font-size:.9rem;line-height:1.5}
+.ad-btn{display:inline-block;background:linear-gradient(90deg,#F9B34A,#EE7D55);color:#1B1206;font-weight:700;border-radius:14px;padding:16px 30px;text-decoration:none;font-size:1.1rem;transition:transform .15s}
+.ad-btn:hover{transform:translateY(-2px)}
+.ad-url{display:block;margin-top:14px;color:#9FB0CC;font-size:.95rem}
+@media (max-width:799px){.ad{grid-template-columns:1fr;padding:28px 22px;border-radius:22px;gap:28px}}
 
 /* Liên hệ */
 .cta h2{font-size:clamp(2.4rem,6vw,4rem)}
@@ -309,19 +320,36 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
     </div>
   </section>
 
-  <!-- Góc quảng cáo shop -->
+  <!-- Quảng cáo Ocean Sports VN -->
   <section class="zone z4" id="shop">
     <div class="in">
       <p class="mark-depth"><span class="en">Depth 24 m. A corner for dive lovers</span><span class="vi">Độ sâu 24 m. Góc nhỏ dành cho người mê lặn</span><span class="ru">Глубина 24 м. Уголок для любителей дайвинга</span></p>
-      <div class="shop">
-        <div class="flag" aria-hidden="true"></div>
-        <div class="body">
-          <span class="tag"><span class="en">10% off for guests of this page</span><span class="vi">Giảm 10% cho khách của trang này</span><span class="ru">Скидка 10% для гостей этой страницы</span></span>
-          <h3>Ocean Sports</h3>
-          <p><span class="en">Masks, fins, wetsuits for sale.</span><span class="vi">Bán kính lặn, chân nhái, đồ lặn. Nhận bảo dưỡng bộ điều áp.</span><span class="ru">Маски, ласты, гидрокостюмы и дайв-компьютеры в продаже.</span></p>
-          <p><span class="en">39 Mac Dinh Chi, Phuoc Tien, Nha Trang, Khanh Hoa | 8:30 AM - 19:00 PM</span><span class="vi">39 Mạc Đĩnh Chi, Phước Tiến, Nha Trang, Khánh Hoà | 8:30 AM - 19:00 PM</span><span class="ru">39 Mac Dinh Chi, Phuoc Tien, Nha Trang, Khanh Hoa | 8:30 AM - 19:00</span></p>
-          <p><span class="en">Remote shop at Duong Dong, Phu Quoc, Kien Giang | 7:00 AM - 20:00 PM</span><span class="vi">Bán lưu động tại Dương Đông, Phú Quốc, Kiên Giang | 7:00 AM - 20:00 PM</span><span class="ru">Мобильные продажи в Duong Dong, Phu Quoc, Kien Giang | 7:00 AM - 20:00 PM</span></p>
-          <a class="more" data-link="shop" href="#contact" target="_blank" rel="noopener"><span class="en">Visit the shop</span><span class="vi">Xem cửa hàng</span><span class="ru">Перейти в магазин</span></a>
+      <div class="ad">
+        <div>
+          <span class="ad-badge"><span class="en">Recommended for you</span><span class="vi">Gợi ý cho bạn</span><span class="ru">Рекомендуем</span></span>
+          <h3 class="ad-title"><span class="en">Need dive gear? We often stop by <em>Ocean Sports VN</em></span><span class="vi">Cần đồ lặn? Chúng tôi hay ghé <em>Ocean Sports VN</em></span><span class="ru">Нужно снаряжение? Мы часто заходим в <em>Ocean Sports VN</em></span></h3>
+          <p class="ad-sub"><span class="en">Genuine dive equipment from Europe and the US.</span><span class="vi">Thiết bị lặn chính hãng từ châu Âu và Mỹ.</span><span class="ru">Оригинальное снаряжение для дайвинга из Европы и США.</span></p>
+          <ul class="ad-list">
+            <li><span class="en">Fins, masks, snorkels, wetsuits and accessories</span><span class="vi">Chân nhái, kính lặn, ống thở, đồ lặn và phụ kiện</span><span class="ru">Ласты, маски, трубки, гидрокостюмы и аксессуары</span></li>
+            <li><span class="en">Regulator servicing available</span><span class="vi">Nhận bảo dưỡng bộ điều áp</span><span class="ru">Обслуживание регуляторов</span></li>
+            <li><span class="en">Free shipping on orders over 4 million VND</span><span class="vi">Miễn phí vận chuyển cho đơn trên 4 triệu đồng</span><span class="ru">Бесплатная доставка при заказе от 4 млн донгов</span></li>
+          </ul>
+        </div>
+        <div>
+          <div class="coupon">
+            <p><span class="en">Exclusive offer for guests of this page</span><span class="vi">Ưu đãi riêng cho khách của trang này</span><span class="ru">Специальное предложение для гостей этой страницы</span></p>
+            <strong><span class="en">10% off</span><span class="vi">Giảm 10%</span><span class="ru">Скидка 10%</span></strong>
+          </div>
+          <dl class="stores">
+            <dt><span class="en">Nha Trang</span><span class="vi">Nha Trang</span><span class="ru">Нячанг</span></dt>
+            <dd>39 Mạc Đĩnh Chi, Phước Tiến<br>8:30 – 19:00</dd>
+            <dt><span class="en">Phu Quoc</span><span class="vi">Phú Quốc</span><span class="ru">Фукуок</span></dt>
+            <dd><span class="en">Mobile sales in Duong Dong</span><span class="vi">Bán lưu động tại Dương Đông</span><span class="ru">Выездная торговля в Зыонг-Донге</span><br>7:00 – 20:00</dd>
+            <dt><span class="en">Quy Nhon</span><span class="vi">Quy Nhơn</span><span class="ru">Куйнён</span></dt>
+            <dd>71 Bùi Thị Xuân, Bình Định<br><span class="en">Open by phone appointment only</span><span class="vi">Chỉ mở khi gọi điện trước</span><span class="ru">Только по предварительному звонку</span></dd>
+          </dl>
+          <a class="ad-btn" data-link="shop" href="#shop" target="_blank" rel="noopener"><span class="en">Visit the shop</span><span class="vi">Xem cửa hàng</span><span class="ru">Перейти в магазин</span></a>
+          <a class="ad-url" data-link="shop" href="#shop" target="_blank" rel="noopener">www.oceansportsvn.com</a>
         </div>
       </div>
     </div>
@@ -351,20 +379,20 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
   </section>
 </main>
 
-<footer><span class="en">© Delight Diving. Prices and details may change. Clicks on the contact buttons are counted anonymously.</span><span class="vi">© Delight Diving. Giá và nội dung có thể thay đổi. Lượt bấm các nút liên hệ được đếm ẩn danh.</span><span class="ru">© Delight Diving. Цены и условия могут меняться. Нажатия на кнопки связи учитываются анонимно.</span></footer>
+<footer><span class="en">© Delight Diving. Prices and details may change. Clicks on the contact buttons and the partner shop link are counted anonymously.</span><span class="vi">© Delight Diving. Giá và nội dung có thể thay đổi. Lượt bấm các nút liên hệ và liên kết cửa hàng đối tác được đếm ẩn danh.</span><span class="ru">© Delight Diving. Цены и условия могут меняться. Нажатия на кнопки связи и ссылку на магазин-партнёр учитываются анонимно.</span></footer>
 
 <script>
 /* ====== CHỈNH THÔNG TIN Ở ĐÂY ====== */
 const CONFIG = {
-  phone: "+84777777074",        // số dùng cho nút Gọi, Zalo, WhatsApp (có +84, không khoảng trắng)
-  phoneShow: "+84 777 777 074",
+  phone: "+84783395163",        // số dùng cho nút Gọi, Zalo, WhatsApp (có +84, không khoảng trắng)
+  phoneShow: "+84 783 395 163",
   phone2: "+84777777074",       // số thứ hai, chỉ hiển thị ở phần liên hệ
   phone2Show: "+84 77 7777 074",
   email: "dediving@gmail.com",
   website: "http://www.delightdiving.com",
-  facebook: "https://www.facebook.com/DelightDiving",              // dán link Facebook thật của Delight Diving
+  facebook: "https://www.facebook.com/",              // dán link Facebook thật của Delight Diving
   instagram: "https://www.instagram.com/delight_diving/",
-  shopUrl: "https://oceansportsvn.com/",              // link website / fanpage / Google Maps của shop lặn
+  shopUrl: "https://www.oceansportsvn.com",           // link nút "Xem cửa hàng" của Ocean Sports VN (lượt bấm được đếm)
   whatsappMessage: "Hello, I would like to book a dive trip. / Xin chào, tôi muốn đặt tour lặn biển. / Здравствуйте, хочу забронировать дайв-тур.",
   trackUrl: ""   // dán URL Web App của Google Apps Script để đếm lượt bấm và gửi email (xem file google-apps-script.gs)
 };
@@ -425,7 +453,7 @@ var nav = (navigator.language || "").toLowerCase();
 setLang(saved && TITLES[saved] ? saved : (nav.indexOf("vi") === 0 ? "vi" : nav.indexOf("ru") === 0 ? "ru" : "en"));
 
 /* Đếm lượt bấm nút Gọi / Zalo / WhatsApp */
-const TRACKED = { call: 1, zalo: 1, wa: 1 };
+const TRACKED = { call: 1, zalo: 1, wa: 1, shop: 1 };
 try {
   if (/[?&]notrack=1/.test(location.search)) localStorage.setItem("notrack", "1");   // thêm ?notrack=1 vào link để máy của bạn không bị đếm
   if (/[?&]notrack=0/.test(location.search)) localStorage.removeItem("notrack");
