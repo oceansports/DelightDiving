@@ -123,6 +123,7 @@ html[data-loc="pq"] [data-only="nt"],html[data-loc="nt"] [data-only="pq"]{displa
 .tbl td{padding:12px;border-bottom:1px solid rgba(255,255,255,.3);vertical-align:top}
 .tbl td:last-child,.tbl th:last-child{text-align:right;white-space:nowrap}
 .tbl td:last-child{font-family:var(--head);font-weight:800;font-size:1.15rem}
+.tbl td .upd{font:600 .9rem var(--body);opacity:.9}
 .tbl caption{text-align:left;font-family:var(--head);font-weight:800;font-size:1.3rem;padding-bottom:6px}
 .scroll-x{overflow-x:auto}
 
@@ -274,9 +275,9 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
             <th scope="col"><span class="en">Fee (USD)</span><span class="vi">Giá (USD)</span><span class="ru">Цена (USD)</span></th>
           </tr></thead>
           <tbody>
-            <tr><td><span class="en">Try scuba</span><span class="vi">Lặn trải nghiệm</span><span class="ru">Пробное погружение</span></td><td>2</td><td><span class="en">20 to 30 mins/site</span><span class="vi">20 đến 30 phút/ca</span><span class="ru">От 20 до 30 мин на точку</span></td><td><span data-only="pq">110</span><span data-only="nt">70</span></td></tr>
-            <tr><td><span class="en">Fun dive</span><span class="vi">Lặn giải trí</span><span class="ru">Фан-дайвинг</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span><span class="ru">От 40 до 50 мин на точку</span></td><td><span data-only="pq">100</span><span data-only="nt">65</span></td></tr>
-            <tr><td><span class="en">Snorkeling</span><span class="vi">Bơi snorkeling</span><span class="ru">Снорклинг</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span><span class="ru">От 40 до 50 мин на точку</span></td><td><span data-only="pq">50</span><span data-only="nt">30</span></td></tr>
+            <tr><td><span class="en">Try scuba</span><span class="vi">Lặn trải nghiệm</span><span class="ru">Пробное погружение</span></td><td>2</td><td><span class="en">20 to 30 mins/site</span><span class="vi">20 đến 30 phút/ca</span><span class="ru">От 20 до 30 мин на точку</span></td><td><span data-only="pq">110</span><span data-only="nt" class="upd"><span class="en">Updating</span><span class="vi">Đang cập nhật</span><span class="ru">Обновляется</span></span></td></tr>
+            <tr><td><span class="en">Fun dive</span><span class="vi">Lặn giải trí</span><span class="ru">Фан-дайвинг</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span><span class="ru">От 40 до 50 мин на точку</span></td><td><span data-only="pq">100</span><span data-only="nt" class="upd"><span class="en">Updating</span><span class="vi">Đang cập nhật</span><span class="ru">Обновляется</span></span></td></tr>
+            <tr><td><span class="en">Snorkeling</span><span class="vi">Bơi snorkeling</span><span class="ru">Снорклинг</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span><span class="ru">От 40 до 50 мин на точку</span></td><td><span data-only="pq">50</span><span data-only="nt" class="upd"><span class="en">Updating</span><span class="vi">Đang cập nhật</span><span class="ru">Обновляется</span></span></td></tr>
           </tbody>
         </table>
       </div>
@@ -317,22 +318,29 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
             <th scope="col"><span class="en">Fee (USD)</span><span class="vi">Giá (USD)</span><span class="ru">Цена (USD)</span></th>
           </tr></thead>
           <tbody>
-            <tr><td><span class="en">Open Water Diver</span><span class="vi">Lặn bình khí cơ bản</span><span class="ru">Open Water Diver</span></td><td>4</td><td><span class="en">1-day pool session, 2-day open water</span><span class="vi">1 ngày tại hồ bơi, 2 ngày tại biển</span><span class="ru">1 день в бассейне, 2 дня в открытой воде</span></td><td><span data-only="pq">390</span><span data-only="nt">320</span></td></tr>
-            <tr><td><span class="en">Advanced Adventurer</span><span class="vi">Lặn bình khí nâng cao</span><span class="ru">Advanced Adventurer</span></td><td>5</td><td><span class="en">2-day open water</span><span class="vi">2 ngày tại biển</span><span class="ru">2 дня в открытой воде</span></td><td><span data-only="pq">370</span><span data-only="nt">300</span></td></tr>
-            <tr><td><span class="en">Diver Stress and Rescue</span><span class="vi">Lặn cứu hộ</span><span class="ru">Diver Stress and Rescue (спасательный курс)</span></td><td>6</td><td><span class="en">3-day open water</span><span class="vi">3 ngày tại biển</span><span class="ru">3 дня в открытой воде</span></td><td><span data-only="pq">520</span><span data-only="nt">480</span></td></tr>
+            <tr><td><span class="en">Open Water Diver</span><span class="vi">Lặn bình khí cơ bản</span><span class="ru">Open Water Diver</span></td><td>4</td><td><span class="en">1-day pool session, 2-day open water</span><span class="vi">1 ngày tại hồ bơi, 2 ngày tại biển</span><span class="ru">1 день в бассейне, 2 дня в открытой воде</span></td><td><span data-only="pq">390</span><span data-only="nt" class="upd"><span class="en">Updating</span><span class="vi">Đang cập nhật</span><span class="ru">Обновляется</span></span></td></tr>
+            <tr><td><span class="en">Advanced Adventurer</span><span class="vi">Lặn bình khí nâng cao</span><span class="ru">Advanced Adventurer</span></td><td>5</td><td><span class="en">2-day open water</span><span class="vi">2 ngày tại biển</span><span class="ru">2 дня в открытой воде</span></td><td><span data-only="pq">370</span><span data-only="nt" class="upd"><span class="en">Updating</span><span class="vi">Đang cập nhật</span><span class="ru">Обновляется</span></span></td></tr>
+            <tr><td><span class="en">Diver Stress and Rescue</span><span class="vi">Lặn cứu hộ</span><span class="ru">Diver Stress and Rescue (спасательный курс)</span></td><td>6</td><td><span class="en">3-day open water</span><span class="vi">3 ngày tại biển</span><span class="ru">3 дня в открытой воде</span></td><td><span data-only="pq">520</span><span data-only="nt" class="upd"><span class="en">Updating</span><span class="vi">Đang cập nhật</span><span class="ru">Обновляется</span></span></td></tr>
             <tr><td><span class="en">Specialities</span><span class="vi">Kỹ năng chuyên môn</span><span class="ru">Специализации</span></td><td>-</td><td><span class="en">Depends on the selected program</span><span class="vi">Phụ thuộc vào chương trình học, vui lòng liên hệ để được tư vấn</span><span class="ru">Зависит от выбранной программы</span></td><td>-</td></tr>
-            <tr><td><span class="en">Refresher course</span><span class="vi">Ôn tập</span><span class="ru">Курс повторения (Refresher)</span></td><td>2</td><td><span class="en">1-day open water</span><span class="vi">1 ngày tại biển</span><span class="ru">1 день в открытой воде</span></td><td><span data-only="pq">110</span><span data-only="nt">80</span></td></tr>
+            <tr><td><span class="en">Refresher course</span><span class="vi">Ôn tập</span><span class="ru">Курс повторения (Refresher)</span></td><td>2</td><td><span class="en">1-day open water</span><span class="vi">1 ngày tại biển</span><span class="ru">1 день в открытой воде</span></td><td><span data-only="pq">110</span><span data-only="nt" class="upd"><span class="en">Updating</span><span class="vi">Đang cập nhật</span><span class="ru">Обновляется</span></span></td></tr>
           </tbody>
         </table>
       </div>
       <p class="fine"><span class="en">Fee included: online textbooks, SSI international dive certificate fee, diving insurance from DiveAssure, hotel transfer (within city center), high-quality gear, boat fee, refreshments on boat (tea, coffee, fruits) and lunch.</span><span class="vi">Giá đã bao gồm: giáo trình lý thuyết, phí cấp chứng chỉ lặn quốc tế SSI, bảo hiểm lặn từ DiveAssure, xe đưa đón từ trung tâm thành phố, trang thiết bị lặn chất lượng cao, tàu di chuyển (trà, cà phê, trái cây) và bữa trưa.</span><span class="ru">В стоимость входит: онлайн-учебники, оформление международного сертификата SSI, страховка DiveAssure, трансфер от отеля (в пределах центра города), качественное снаряжение, аренда лодки, чай, кофе, фрукты на борту и обед.</span></p>
 
-      <div class="gallery">
+      <div class="gallery" data-only="pq">
         <img src="images/reefdiver.jpg" alt="Diver above a coral reef" loading="lazy">
         <img src="images/group.jpg" alt="Three divers swimming together" loading="lazy">
         <img src="images/friends.jpg" alt="Group of divers smiling underwater" loading="lazy">
         <img src="images/pair.jpg" alt="Two divers on a reef dive" loading="lazy">
         <img src="images/reef2.jpg" alt="Diver exploring a reef" loading="lazy">
+      </div>
+      <div class="gallery" data-only="nt">
+        <img src="images/nha-trang-1.jpg" alt="Diving in Nha Trang 1" loading="lazy" onerror="this.style.display='none'">
+        <img src="images/nha-trang-2.jpg" alt="Diving in Nha Trang 2" loading="lazy" onerror="this.style.display='none'">
+        <img src="images/nha-trang-3.jpg" alt="Diving in Nha Trang 3" loading="lazy" onerror="this.style.display='none'">
+        <img src="images/nha-trang-4.jpg" alt="Diving in Nha Trang 4" loading="lazy" onerror="this.style.display='none'">
+        <img src="images/nha-trang-5.jpg" alt="Diving in Nha Trang 5" loading="lazy" onerror="this.style.display='none'">
       </div>
     </div>
   </section>
@@ -405,9 +413,10 @@ const CONFIG = {
   phoneShow: "+84 783 395 163",
   phone2: "+84777777074",       // số thứ hai, chỉ hiển thị ở phần liên hệ
   phone2Show: "+84 77 7777 074",
+  zalo: "0777777074",           // số dùng cho nút Zalo
   email: "dediving@gmail.com",
   website: "http://www.delightdiving.com",
-  facebook: "https://www.facebook.com/",              // dán link Facebook thật của Delight Diving
+  facebook: "https://www.facebook.com/DelightDiving",              // dán link Facebook thật của Delight Diving
   instagram: "https://www.instagram.com/delight_diving/",
   shopUrl: "https://www.oceansportsvn.com",           // link nút "Xem cửa hàng" của Ocean Sports VN (lượt bấm được đếm)
   whatsappMessage: "Hello, I would like to book a dive trip. / Xin chào, tôi muốn đặt tour lặn biển. / Здравствуйте, хочу забронировать дайв-тур.",
@@ -418,7 +427,7 @@ const CONFIG = {
 const digits = CONFIG.phone.replace(/\D/g, "");
 const links = {
   call: "tel:" + CONFIG.phone,
-  zalo: "https://zalo.me/" + digits,
+  zalo: "https://zalo.me/" + CONFIG.zalo.replace(/\D/g, ""),
   wa: "",   // được tạo trong setLoc() để kèm điểm lặn khách chọn
   fb: CONFIG.facebook,
   ig: CONFIG.instagram,
