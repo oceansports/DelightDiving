@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en" data-lang="en" data-loc="pq">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,6 +61,18 @@ html[data-lang="ru"] .ru{display:inline}
 .lang{position:fixed;top:10px;right:12px;z-index:25;display:flex;background:rgba(3,16,45,.92);border-radius:999px;padding:3px}
 .lang button{font:600 .9rem var(--head);color:#fff;background:transparent;border:0;border-radius:999px;padding:6px 14px;cursor:pointer;min-width:48px}
 .lang button[aria-pressed="true"]{background:var(--orange);color:var(--navy)}
+
+/* Điểm lặn: Phú Quốc (pq) / Nha Trang (nt) */
+html[data-loc="pq"] [data-only="nt"],html[data-loc="nt"] [data-only="pq"]{display:none!important}
+.locpick button{font:800 1.05rem var(--head);color:#fff;background:rgba(255,255,255,.08);border:2px solid #fff;border-radius:14px;padding:12px 24px;cursor:pointer}
+.locpick button[aria-pressed="true"]{background:var(--orange);border-color:var(--orange);color:var(--navy)}
+.locpick .lbl{font-weight:600}
+.locpick .opts{display:flex;flex-wrap:wrap;gap:12px}
+.locpick.big{margin-bottom:36px;max-width:520px}
+.locpick.big .lbl{display:block;margin-bottom:10px;font-size:1.05rem}
+.locpick.big button{flex:1 1 200px;font-size:1.5rem;padding:18px 28px}
+.locpick.mini{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:0 0 28px}
+.locpick.mini button{font-size:.95rem;padding:8px 18px;border-radius:999px}
 
 /* Hero */
 .hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;
@@ -183,8 +195,9 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
   <!-- Hero -->
   <header class="zone hero" id="top">
     <div class="in">
-      <p class="brand"><span class="en">Delight Diving | SSI Certified Dive Center | Phu Quoc</span><span class="vi">Delight Diving | Trung tâm lặn cấp chứng chỉ quốc tế SSI | Phú Quốc</span><span class="ru">Delight Diving | Сертифицированный дайв-центр SSI | Фукуок</span></p>
-      <h1><span class="en">Explore Phu Quoc underwater</span><span class="vi">Khám phá đại dương Phú Quốc</span><span class="ru">Исследуйте подводный мир Фукуока</span></h1>
+      <div class="locpick big" role="group" aria-label="Dive location / Điểm lặn / Место"><span class="lbl"><span class="en">Choose your dive location</span><span class="vi">Chọn điểm lặn của bạn</span><span class="ru">Выберите место погружений</span></span><div class="opts"><button type="button" data-setloc="pq" aria-pressed="true"><span class="en">Phu Quoc</span><span class="vi">Phú Quốc</span><span class="ru">Фукуок</span></button><button type="button" data-setloc="nt" aria-pressed="false"><span class="en">Nha Trang</span><span class="vi">Nha Trang</span><span class="ru">Нячанг</span></button></div></div>
+      <p class="brand"><span data-only="pq"><span class="en">Delight Diving | SSI Certified Dive Center | Phu Quoc</span><span class="vi">Delight Diving | Trung tâm lặn cấp chứng chỉ quốc tế SSI | Phú Quốc</span><span class="ru">Delight Diving | Сертифицированный дайв-центр SSI | Фукуок</span></span><span data-only="nt"><span class="en">Delight Diving | SSI Certified Dive Center | Nha Trang</span><span class="vi">Delight Diving | Trung tâm lặn cấp chứng chỉ quốc tế SSI | Nha Trang</span><span class="ru">Delight Diving | Сертифицированный дайв-центр SSI | Нячанг</span></span></p>
+      <h1><span data-only="pq"><span class="en">Explore Phu Quoc underwater</span><span class="vi">Khám phá đại dương Phú Quốc</span><span class="ru">Исследуйте подводный мир Фукуока</span></span><span data-only="nt"><span class="en">Explore Nha Trang underwater</span><span class="vi">Khám phá đại dương Nha Trang</span><span class="ru">Исследуйте подводный мир Нячанга</span></span></h1>
       <p class="with"><span class="en">with Delight Diving</span><span class="vi">cùng Delight Diving</span><span class="ru">вместе с Delight Diving</span></p>
       <p class="lead"><span class="en">Discover your next adventure! Join us for an unforgettable scuba diving experience.</span><span class="vi">Tham gia trải nghiệm lặn bình khí đáng nhớ cùng cả gia đình trong kì nghỉ này.</span><span class="ru">Откройте для себя новое приключение! Присоединяйтесь к нам для незабываемого дайвинга.</span></p>
       <div class="btns">
@@ -216,10 +229,12 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
     <div class="in">
       <p class="mark-depth"><span class="en">Depth 12 m</span><span class="vi">Độ sâu 12 m</span><span class="ru">Глубина 12 м</span></p>
       <h2><span class="en">Dive tours</span><span class="vi">Tour lặn biển</span><span class="ru">Дайв-туры</span></h2>
+      <div class="locpick mini" role="group" aria-label="Dive location / Điểm lặn / Место"><span class="lbl"><span class="en">Dive location:</span><span class="vi">Điểm lặn:</span><span class="ru">Место погружений:</span></span><div class="opts"><button type="button" data-setloc="pq" aria-pressed="true"><span class="en">Phu Quoc</span><span class="vi">Phú Quốc</span><span class="ru">Фукуок</span></button><button type="button" data-setloc="nt" aria-pressed="false"><span class="en">Nha Trang</span><span class="vi">Nha Trang</span><span class="ru">Нячанг</span></button></div></div>
+
 
       <div class="schedule">
         <b><span class="en">Tour schedule</span><span class="vi">Lịch trình tour</span><span class="ru">Расписание тура</span></b>
-        <p><span class="en">Departure 8:00 to 8:30 AM. Return around 3:00 PM. 1 day, 2 dives.</span><span class="vi">Khởi hành 8:00 đến 8:30 sáng. Kết thúc khoảng 3:00 chiều. 1 ngày, 2 lần lặn.</span><span class="ru">Отправление с 8:00 до 8:30. Возвращение около 15:00. 1 день, 2 погружения.</span></p>
+        <p><span data-only="pq"><span class="en">Departure 8:00 to 8:30 AM. Return around 3:00 PM. 1 day, 2 dives.</span><span class="vi">Khởi hành 8:00 đến 8:30 sáng. Kết thúc khoảng 3:00 chiều. 1 ngày, 2 lần lặn.</span><span class="ru">Отправление с 8:00 до 8:30. Возвращение около 15:00. 1 день, 2 погружения.</span></span><span data-only="nt"><span class="en">Departure 7:00 to 7:30 AM. Return around 2:00 PM. 1 day, 2 dives.</span><span class="vi">Khởi hành 7:00 đến 7:30 sáng. Kết thúc khoảng 2:00 chiều. 1 ngày, 2 lần lặn.</span><span class="ru">Отправление с 7:00 до 7:30. Возвращение около 14:00. 1 день, 2 погружения.</span></span></p>
       </div>
 
       <div class="pair">
@@ -259,9 +274,9 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
             <th scope="col"><span class="en">Fee (USD)</span><span class="vi">Giá (USD)</span><span class="ru">Цена (USD)</span></th>
           </tr></thead>
           <tbody>
-            <tr><td><span class="en">Try scuba</span><span class="vi">Lặn trải nghiệm</span><span class="ru">Пробное погружение</span></td><td>2</td><td><span class="en">20 to 30 mins/site</span><span class="vi">20 đến 30 phút/ca</span><span class="ru">От 20 до 30 мин на точку</span></td><td>110</td></tr>
-            <tr><td><span class="en">Fun dive</span><span class="vi">Lặn giải trí</span><span class="ru">Фан-дайвинг</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span><span class="ru">От 40 до 50 мин на точку</span></td><td>100</td></tr>
-            <tr><td><span class="en">Snorkeling</span><span class="vi">Bơi snorkeling</span><span class="ru">Снорклинг</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span><span class="ru">От 40 до 50 мин на точку</span></td><td>50</td></tr>
+            <tr><td><span class="en">Try scuba</span><span class="vi">Lặn trải nghiệm</span><span class="ru">Пробное погружение</span></td><td>2</td><td><span class="en">20 to 30 mins/site</span><span class="vi">20 đến 30 phút/ca</span><span class="ru">От 20 до 30 мин на точку</span></td><td><span data-only="pq">110</span><span data-only="nt">70</span></td></tr>
+            <tr><td><span class="en">Fun dive</span><span class="vi">Lặn giải trí</span><span class="ru">Фан-дайвинг</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span><span class="ru">От 40 до 50 мин на точку</span></td><td><span data-only="pq">100</span><span data-only="nt">65</span></td></tr>
+            <tr><td><span class="en">Snorkeling</span><span class="vi">Bơi snorkeling</span><span class="ru">Снорклинг</span></td><td>2</td><td><span class="en">40 to 50 mins/site</span><span class="vi">40 đến 50 phút/ca</span><span class="ru">От 40 до 50 мин на точку</span></td><td><span data-only="pq">50</span><span data-only="nt">30</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -276,6 +291,8 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
     <div class="in">
       <p class="mark-depth"><span class="en">Depth 18 m</span><span class="vi">Độ sâu 18 m</span><span class="ru">Глубина 18 м</span></p>
       <h2><span class="en">Scuba diving courses</span><span class="vi">Khóa học lặn bình khí</span><span class="ru">Курсы дайвинга</span></h2>
+      <div class="locpick mini" role="group" aria-label="Dive location / Điểm lặn / Место"><span class="lbl"><span class="en">Dive location:</span><span class="vi">Điểm lặn:</span><span class="ru">Место погружений:</span></span><div class="opts"><button type="button" data-setloc="pq" aria-pressed="true"><span class="en">Phu Quoc</span><span class="vi">Phú Quốc</span><span class="ru">Фукуок</span></button><button type="button" data-setloc="nt" aria-pressed="false"><span class="en">Nha Trang</span><span class="vi">Nha Trang</span><span class="ru">Нячанг</span></button></div></div>
+
       <div class="courses">
         <div>
           <p><span class="en">Take 3 days to become an SSI-certified diver and explore the underwater world anywhere. We offer courses for every level, from basic to advanced:</span><span class="vi">Chỉ 3 ngày để sở hữu chứng chỉ lặn quốc tế SSI, mở ra cơ hội khám phá đại dương trên khắp thế giới. Delight Diving cung cấp các khóa học lặn cho mọi cấp độ:</span><span class="ru">Всего за 3 дня вы можете стать дайвером с международным сертификатом SSI и исследовать подводный мир в любой точке планеты. Мы предлагаем курсы для любого уровня, от базового до продвинутого:</span></p>
@@ -300,11 +317,11 @@ footer{padding:26px 24px;background:#04132F;color:#A9BEE0;font-size:.9rem;text-a
             <th scope="col"><span class="en">Fee (USD)</span><span class="vi">Giá (USD)</span><span class="ru">Цена (USD)</span></th>
           </tr></thead>
           <tbody>
-            <tr><td><span class="en">Open Water Diver</span><span class="vi">Lặn bình khí cơ bản</span><span class="ru">Open Water Diver</span></td><td>4</td><td><span class="en">1-day pool session, 2-day open water</span><span class="vi">1 ngày tại hồ bơi, 2 ngày tại biển</span><span class="ru">1 день в бассейне, 2 дня в открытой воде</span></td><td>390</td></tr>
-            <tr><td><span class="en">Advanced Adventurer</span><span class="vi">Lặn bình khí nâng cao</span><span class="ru">Advanced Adventurer</span></td><td>5</td><td><span class="en">2-day open water</span><span class="vi">2 ngày tại biển</span><span class="ru">2 дня в открытой воде</span></td><td>370</td></tr>
-            <tr><td><span class="en">Diver Stress and Rescue</span><span class="vi">Lặn cứu hộ</span><span class="ru">Diver Stress and Rescue (спасательный курс)</span></td><td>6</td><td><span class="en">3-day open water</span><span class="vi">3 ngày tại biển</span><span class="ru">3 дня в открытой воде</span></td><td>520</td></tr>
+            <tr><td><span class="en">Open Water Diver</span><span class="vi">Lặn bình khí cơ bản</span><span class="ru">Open Water Diver</span></td><td>4</td><td><span class="en">1-day pool session, 2-day open water</span><span class="vi">1 ngày tại hồ bơi, 2 ngày tại biển</span><span class="ru">1 день в бассейне, 2 дня в открытой воде</span></td><td><span data-only="pq">390</span><span data-only="nt">320</span></td></tr>
+            <tr><td><span class="en">Advanced Adventurer</span><span class="vi">Lặn bình khí nâng cao</span><span class="ru">Advanced Adventurer</span></td><td>5</td><td><span class="en">2-day open water</span><span class="vi">2 ngày tại biển</span><span class="ru">2 дня в открытой воде</span></td><td><span data-only="pq">370</span><span data-only="nt">300</span></td></tr>
+            <tr><td><span class="en">Diver Stress and Rescue</span><span class="vi">Lặn cứu hộ</span><span class="ru">Diver Stress and Rescue (спасательный курс)</span></td><td>6</td><td><span class="en">3-day open water</span><span class="vi">3 ngày tại biển</span><span class="ru">3 дня в открытой воде</span></td><td><span data-only="pq">520</span><span data-only="nt">480</span></td></tr>
             <tr><td><span class="en">Specialities</span><span class="vi">Kỹ năng chuyên môn</span><span class="ru">Специализации</span></td><td>-</td><td><span class="en">Depends on the selected program</span><span class="vi">Phụ thuộc vào chương trình học, vui lòng liên hệ để được tư vấn</span><span class="ru">Зависит от выбранной программы</span></td><td>-</td></tr>
-            <tr><td><span class="en">Refresher course</span><span class="vi">Ôn tập</span><span class="ru">Курс повторения (Refresher)</span></td><td>2</td><td><span class="en">1-day open water</span><span class="vi">1 ngày tại biển</span><span class="ru">1 день в открытой воде</span></td><td>110</td></tr>
+            <tr><td><span class="en">Refresher course</span><span class="vi">Ôn tập</span><span class="ru">Курс повторения (Refresher)</span></td><td>2</td><td><span class="en">1-day open water</span><span class="vi">1 ngày tại biển</span><span class="ru">1 день в открытой воде</span></td><td><span data-only="pq">110</span><span data-only="nt">80</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -394,7 +411,7 @@ const CONFIG = {
   instagram: "https://www.instagram.com/delight_diving/",
   shopUrl: "https://www.oceansportsvn.com",           // link nút "Xem cửa hàng" của Ocean Sports VN (lượt bấm được đếm)
   whatsappMessage: "Hello, I would like to book a dive trip. / Xin chào, tôi muốn đặt tour lặn biển. / Здравствуйте, хочу забронировать дайв-тур.",
-  trackUrl: "https://script.google.com/macros/s/AKfycbznvrrklGKzO0k7Eh1H1B4YpnIigYu0HKXrL_mCMKimfj0Y3aTffkXK9pn49rIGkTfMlg/exec"   // dán URL Web App của Google Apps Script để đếm lượt bấm và gửi email (xem file google-apps-script.gs)
+  trackUrl: ""   // dán URL Web App của Google Apps Script để đếm lượt bấm và gửi email (xem file google-apps-script.gs)
 };
 /* ==================================== */
 
@@ -402,7 +419,7 @@ const digits = CONFIG.phone.replace(/\D/g, "");
 const links = {
   call: "tel:" + CONFIG.phone,
   zalo: "https://zalo.me/" + digits,
-  wa: "https://wa.me/" + digits + "?text=" + encodeURIComponent(CONFIG.whatsappMessage),
+  wa: "",   // được tạo trong setLoc() để kèm điểm lặn khách chọn
   fb: CONFIG.facebook,
   ig: CONFIG.instagram,
   shop: CONFIG.shopUrl
@@ -430,14 +447,14 @@ window.addEventListener("resize", updateDepth);
 
 /* Ngôn ngữ: tự chọn theo trình duyệt, nhớ lựa chọn */
 const TITLES = {
-  en: "Delight Diving | Scuba diving in Phu Quoc",
-  vi: "Delight Diving | Lặn bình khí tại Phú Quốc",
-  ru: "Delight Diving | Дайвинг на Фукуоке"
+  en: { pq: "Delight Diving | Scuba diving in Phu Quoc", nt: "Delight Diving | Scuba diving in Nha Trang" },
+  vi: { pq: "Delight Diving | Lặn bình khí tại Phú Quốc", nt: "Delight Diving | Lặn bình khí tại Nha Trang" },
+  ru: { pq: "Delight Diving | Дайвинг на Фукуоке", nt: "Delight Diving | Дайвинг в Нячанге" }
 };
 function setLang(lang) {
   document.documentElement.dataset.lang = lang;
   document.documentElement.lang = lang;
-  document.title = TITLES[lang];
+  document.title = TITLES[lang][document.documentElement.dataset.loc];
   document.querySelectorAll(".lang button").forEach(function (b) {
     b.setAttribute("aria-pressed", String(b.dataset.set === lang));
   });
@@ -451,6 +468,28 @@ var saved = null;
 try { saved = localStorage.getItem("lang"); } catch (e) {}
 var nav = (navigator.language || "").toLowerCase();
 setLang(saved && TITLES[saved] ? saved : (nav.indexOf("vi") === 0 ? "vi" : nav.indexOf("ru") === 0 ? "ru" : "en"));
+
+/* Điểm lặn: pq = Phú Quốc, nt = Nha Trang. Link ?loc=nt mở sẵn Nha Trang, ?loc=pq mở sẵn Phú Quốc */
+const LOCNAME = { pq: "Phu Quoc", nt: "Nha Trang" };
+function setLoc(loc) {
+  if (!LOCNAME[loc]) loc = "pq";
+  document.documentElement.dataset.loc = loc;
+  document.querySelectorAll("[data-setloc]").forEach(function (b) {
+    b.setAttribute("aria-pressed", String(b.dataset.setloc === loc));
+  });
+  document.title = TITLES[document.documentElement.dataset.lang][loc];
+  const msg = CONFIG.whatsappMessage + "\nDive location / Điểm lặn / Место: " + LOCNAME[loc];
+  links.wa = "https://wa.me/" + digits + "?text=" + encodeURIComponent(msg);
+  document.querySelectorAll('[data-link="wa"]').forEach(function (a) { a.href = links.wa; });
+  try { localStorage.setItem("loc", loc); } catch (e) {}
+}
+document.querySelectorAll("[data-setloc]").forEach(function (b) {
+  b.addEventListener("click", function () { setLoc(b.dataset.setloc); });
+});
+var urlLoc = (location.search.match(/[?&]loc=(pq|nt)/) || [])[1];
+var savedLoc = null;
+try { savedLoc = localStorage.getItem("loc"); } catch (e) {}
+setLoc(urlLoc || savedLoc || "pq");
 
 /* Đếm lượt bấm nút Gọi / Zalo / WhatsApp */
 const TRACKED = { call: 1, zalo: 1, wa: 1, shop: 1 };
